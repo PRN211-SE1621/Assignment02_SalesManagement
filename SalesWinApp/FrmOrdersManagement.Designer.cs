@@ -29,28 +29,27 @@
         private void InitializeComponent()
         {
             this.groupBoxSearch = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.txtEndDate = new System.Windows.Forms.DateTimePicker();
+            this.txtStartDate = new System.Windows.Forms.DateTimePicker();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCLose = new System.Windows.Forms.Button();
             this.dgvMemberList = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
-            this.txtCategoryID = new System.Windows.Forms.TextBox();
-            this.txtUnitsInStock = new System.Windows.Forms.TextBox();
-            this.txtProductID = new System.Windows.Forms.TextBox();
+            this.txtMemberID = new System.Windows.Forms.TextBox();
+            this.txtFreight = new System.Windows.Forms.TextBox();
+            this.txtOrderID = new System.Windows.Forms.TextBox();
             this.lbReleaseYear = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.lbManufacturer = new System.Windows.Forms.Label();
             this.lbCarName = new System.Windows.Forms.Label();
             this.lbCarID = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker5 = new System.Windows.Forms.DateTimePicker();
+            this.txtOrderDate = new System.Windows.Forms.DateTimePicker();
+            this.txtRequiredDate = new System.Windows.Forms.DateTimePicker();
+            this.txtShippedDate = new System.Windows.Forms.DateTimePicker();
             this.btnSort = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ádfiaosdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,8 +63,8 @@
             // 
             // groupBoxSearch
             // 
-            this.groupBoxSearch.Controls.Add(this.dateTimePicker3);
-            this.groupBoxSearch.Controls.Add(this.dateTimePicker2);
+            this.groupBoxSearch.Controls.Add(this.txtEndDate);
+            this.groupBoxSearch.Controls.Add(this.txtStartDate);
             this.groupBoxSearch.Controls.Add(this.btnSearch);
             this.groupBoxSearch.Controls.Add(this.label5);
             this.groupBoxSearch.Controls.Add(this.label4);
@@ -76,19 +75,19 @@
             this.groupBoxSearch.TabStop = false;
             this.groupBoxSearch.Text = "Report statistics sales";
             // 
-            // dateTimePicker3
+            // txtEndDate
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(107, 61);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(230, 23);
-            this.dateTimePicker3.TabIndex = 80;
+            this.txtEndDate.Location = new System.Drawing.Point(107, 61);
+            this.txtEndDate.Name = "txtEndDate";
+            this.txtEndDate.Size = new System.Drawing.Size(230, 23);
+            this.txtEndDate.TabIndex = 80;
             // 
-            // dateTimePicker2
+            // txtStartDate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(107, 28);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(230, 23);
-            this.dateTimePicker2.TabIndex = 79;
+            this.txtStartDate.Location = new System.Drawing.Point(107, 28);
+            this.txtStartDate.Name = "txtStartDate";
+            this.txtStartDate.Size = new System.Drawing.Size(230, 23);
+            this.txtStartDate.TabIndex = 79;
             // 
             // btnSearch
             // 
@@ -126,16 +125,6 @@
             this.label1.Size = new System.Drawing.Size(64, 15);
             this.label1.TabIndex = 76;
             this.label1.Text = "Order Date";
-            // 
-            // btnCLose
-            // 
-            this.btnCLose.Location = new System.Drawing.Point(404, 555);
-            this.btnCLose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCLose.Name = "btnCLose";
-            this.btnCLose.Size = new System.Drawing.Size(82, 22);
-            this.btnCLose.TabIndex = 75;
-            this.btnCLose.Text = "Close";
-            this.btnCLose.UseVisualStyleBackColor = true;
             // 
             // dgvMemberList
             // 
@@ -181,29 +170,29 @@
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
             // 
-            // txtCategoryID
+            // txtMemberID
             // 
-            this.txtCategoryID.Location = new System.Drawing.Point(186, 92);
-            this.txtCategoryID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCategoryID.Name = "txtCategoryID";
-            this.txtCategoryID.Size = new System.Drawing.Size(230, 23);
-            this.txtCategoryID.TabIndex = 70;
+            this.txtMemberID.Location = new System.Drawing.Point(186, 92);
+            this.txtMemberID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMemberID.Name = "txtMemberID";
+            this.txtMemberID.Size = new System.Drawing.Size(230, 23);
+            this.txtMemberID.TabIndex = 70;
             // 
-            // txtUnitsInStock
+            // txtFreight
             // 
-            this.txtUnitsInStock.Location = new System.Drawing.Point(186, 126);
-            this.txtUnitsInStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUnitsInStock.Name = "txtUnitsInStock";
-            this.txtUnitsInStock.Size = new System.Drawing.Size(230, 23);
-            this.txtUnitsInStock.TabIndex = 69;
+            this.txtFreight.Location = new System.Drawing.Point(186, 126);
+            this.txtFreight.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFreight.Name = "txtFreight";
+            this.txtFreight.Size = new System.Drawing.Size(230, 23);
+            this.txtFreight.TabIndex = 69;
             // 
-            // txtProductID
+            // txtOrderID
             // 
-            this.txtProductID.Location = new System.Drawing.Point(186, 54);
-            this.txtProductID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtProductID.Name = "txtProductID";
-            this.txtProductID.Size = new System.Drawing.Size(230, 23);
-            this.txtProductID.TabIndex = 66;
+            this.txtOrderID.Location = new System.Drawing.Point(186, 54);
+            this.txtOrderID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtOrderID.Name = "txtOrderID";
+            this.txtOrderID.Size = new System.Drawing.Size(230, 23);
+            this.txtOrderID.TabIndex = 66;
             // 
             // lbReleaseYear
             // 
@@ -250,26 +239,26 @@
             this.lbCarID.TabIndex = 61;
             this.lbCarID.Text = "Order ID";
             // 
-            // dateTimePicker1
+            // txtOrderDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(597, 129);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(218, 23);
-            this.dateTimePicker1.TabIndex = 80;
+            this.txtOrderDate.Location = new System.Drawing.Point(597, 129);
+            this.txtOrderDate.Name = "txtOrderDate";
+            this.txtOrderDate.Size = new System.Drawing.Size(218, 23);
+            this.txtOrderDate.TabIndex = 80;
             // 
-            // dateTimePicker4
+            // txtRequiredDate
             // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(597, 55);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(218, 23);
-            this.dateTimePicker4.TabIndex = 81;
+            this.txtRequiredDate.Location = new System.Drawing.Point(597, 55);
+            this.txtRequiredDate.Name = "txtRequiredDate";
+            this.txtRequiredDate.Size = new System.Drawing.Size(218, 23);
+            this.txtRequiredDate.TabIndex = 81;
             // 
-            // dateTimePicker5
+            // txtShippedDate
             // 
-            this.dateTimePicker5.Location = new System.Drawing.Point(597, 89);
-            this.dateTimePicker5.Name = "dateTimePicker5";
-            this.dateTimePicker5.Size = new System.Drawing.Size(218, 23);
-            this.dateTimePicker5.TabIndex = 82;
+            this.txtShippedDate.Location = new System.Drawing.Point(597, 89);
+            this.txtShippedDate.Name = "txtShippedDate";
+            this.txtShippedDate.Size = new System.Drawing.Size(218, 23);
+            this.txtShippedDate.TabIndex = 82;
             // 
             // btnSort
             // 
@@ -311,7 +300,7 @@
             // toolTripMenuItemOrderManagement
             // 
             this.toolTripMenuItemOrderManagement.Name = "toolTripMenuItemOrderManagement";
-            this.toolTripMenuItemOrderManagement.Size = new System.Drawing.Size(190, 22);
+            this.toolTripMenuItemOrderManagement.Size = new System.Drawing.Size(193, 22);
             this.toolTripMenuItemOrderManagement.Text = "Order Management";
             // 
             // exitToolStripMenuItem
@@ -327,19 +316,18 @@
             this.ClientSize = new System.Drawing.Size(930, 596);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnSort);
-            this.Controls.Add(this.dateTimePicker5);
-            this.Controls.Add(this.dateTimePicker4);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.txtShippedDate);
+            this.Controls.Add(this.txtRequiredDate);
+            this.Controls.Add(this.txtOrderDate);
             this.Controls.Add(this.groupBoxSearch);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnCLose);
             this.Controls.Add(this.dgvMemberList);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.btnLoad);
-            this.Controls.Add(this.txtCategoryID);
-            this.Controls.Add(this.txtUnitsInStock);
-            this.Controls.Add(this.txtProductID);
+            this.Controls.Add(this.txtMemberID);
+            this.Controls.Add(this.txtFreight);
+            this.Controls.Add(this.txtOrderID);
             this.Controls.Add(this.lbReleaseYear);
             this.Controls.Add(this.lbPrice);
             this.Controls.Add(this.lbManufacturer);
@@ -364,24 +352,23 @@
         private Label label5;
         private Label label4;
         private Label label1;
-        private Button btnCLose;
         private DataGridView dgvMemberList;
         private Button btnDelete;
         private Button btnNew;
         private Button btnLoad;
-        private TextBox txtCategoryID;
-        private TextBox txtUnitsInStock;
-        private TextBox txtProductID;
+        private TextBox txtMemberID;
+        private TextBox txtFreight;
+        private TextBox txtOrderID;
         private Label lbReleaseYear;
         private Label lbPrice;
         private Label lbManufacturer;
         private Label lbCarName;
         private Label lbCarID;
-        private DateTimePicker dateTimePicker3;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker5;
-        private DateTimePicker dateTimePicker4;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker txtEndDate;
+        private DateTimePicker txtStartDate;
+        private DateTimePicker txtShippedDate;
+        private DateTimePicker txtRequiredDate;
+        private DateTimePicker txtOrderDate;
         private Button btnSort;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem ádfiaosdfToolStripMenuItem;
