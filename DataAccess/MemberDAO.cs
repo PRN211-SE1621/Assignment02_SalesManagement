@@ -35,6 +35,10 @@ namespace DataAccess
 
         public void Add(Member member)
         {
+            if (GetById(member.MemberId) != null)
+            {
+                throw new Exception("Product ID existed!");
+            }
             salesManagementContext.Members.Add(member);
             salesManagementContext.SaveChanges();
         }
@@ -45,7 +49,14 @@ namespace DataAccess
             salesManagementContext.SaveChanges();
         }
 
-        public Member? checkLogin(string email, string password)
+        public void Update(Member member)
+        {
+            salesManagementContext.Members.Update(member);
+            salesManagementContext.SaveChanges();
+        }
+
+        public Member? CheckLogin(string email, string password)
             => salesManagementContext.Members.SingleOrDefault(m => (m.Email.Equals(email) && m.Password.Equals(password)));
+
     }
 }

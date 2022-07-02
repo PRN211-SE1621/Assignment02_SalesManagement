@@ -33,10 +33,14 @@ namespace DataAccess
 
         public IEnumerable<Product> GetList() => salesManagementContext.Products.ToList();
 
-        public Product? GetByID(int productId) => salesManagementContext.Products.SingleOrDefault(p => p.ProductId.Equals(productId));
+        public Product? GetById(int productId) => salesManagementContext.Products.SingleOrDefault(p => p.ProductId.Equals(productId));
 
         public void Add(Product product)
         {
+            if(GetById(product.ProductId) != null)
+            {
+                throw new Exception("Product ID existed!");
+            } 
             salesManagementContext.Products.Add(product);
             salesManagementContext.SaveChanges();
         }
