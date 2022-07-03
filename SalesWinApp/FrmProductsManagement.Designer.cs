@@ -190,7 +190,6 @@
             this.dgvMemberList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMemberList.Size = new System.Drawing.Size(1077, 212);
             this.dgvMemberList.TabIndex = 56;
-            this.dgvMemberList.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMemberList_CellContentDoubleClick);
             // 
             // btnDelete
             // 
@@ -374,7 +373,6 @@
             this.Controls.Add(this.lbCarID);
             this.Name = "FrmProductsManagement";
             this.Text = "FrmProductsManagement";
-            this.Load += new System.EventHandler(this.FrmProductsManagement_Load);
             this.groupBoxSearch.ResumeLayout(false);
             this.groupBoxSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).EndInit();
