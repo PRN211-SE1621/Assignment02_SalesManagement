@@ -30,10 +30,6 @@ namespace SalesWinApp
             LoadOrderGridView(products);
         }
 
-        private void dgvProductList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void LoadOrderGridView(IEnumerable<Product> products)
         {
@@ -79,7 +75,10 @@ namespace SalesWinApp
                 cart.Quantity++;
             }
 
-            MessageBox.Show("Add success!", "Add success");
+            if (MessageBox.Show("Do you want to continue?", "Add success!", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                this.Close();
+            }
         }
 
         private void txtProductID_TextChanged(object sender, EventArgs e)
@@ -90,6 +89,11 @@ namespace SalesWinApp
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

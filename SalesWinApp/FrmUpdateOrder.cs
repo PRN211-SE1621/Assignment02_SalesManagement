@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace SalesWinApp
 {
-    public partial class FrmOrdersDetail : Form
+    public partial class FrmUpdateOrder : Form
     {
 
         private BindingSource bindingSource;
@@ -21,30 +21,39 @@ namespace SalesWinApp
         private IOrderDetailRepository orderDetailRepository;
         private IOrderRepository orderRepository;
         public List<CartDTO> Cart = new List<CartDTO>();
+        public Order? Order;
 
-        public FrmOrdersDetail()
+        public FrmUpdateOrder()
         {
             InitializeComponent();
             productRepository = new ProductRepository();
             orderRepository = new OrderRepository();
             orderDetailRepository = new OrderDetailRepository();
-
             btnSave.Enabled = false;
 
         }
 
         private void FrmOrdersDetail_Load(object sender, EventArgs e)
         {
-            LoadOrderGridView();
-
         }
-
+        private void ShowInfo()
+        {
+            if (Order != null)
+            {
+                txtFreight.Text = Order.Freight.ToString();
+                txtOrderID.Text = Order.OrderId.ToString();
+                txtMemberID.Text = Order.MemberId.ToString();
+                txtOrderDate.CustomFormat = Order.MemberId.ToString();
+                txtShippedDate.CustomFormat = Order.MemberId.ToString();
+                txtRequiredDate.CustomFormat = Order.MemberId.ToString();
+            }
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             var frm = new FrmAddOrderDetail()
             {
-                TheParent = this
+
             };
             frm.FormClosing += delegate
             {
@@ -57,7 +66,7 @@ namespace SalesWinApp
             try
             {
                 bindingSource = new BindingSource();
-                bindingSource.DataSource = Cart;
+                bindingSource.DataSource = Order;
                 dgvProductList.DataSource = bindingSource;
             }
             catch (Exception ex)
@@ -121,6 +130,22 @@ namespace SalesWinApp
         }
 
         private void FrmOrdersDetail_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmUpdateOrder_Load(object sender, EventArgs e)
+        {
+            ShowInfo();
+            LoadOrderGridView();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

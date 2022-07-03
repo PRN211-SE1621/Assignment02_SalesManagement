@@ -12,5 +12,7 @@ namespace DataAccess.Repository
         public IEnumerable<Order> GetAll();
         public IEnumerable<Order> GetAllIgnore();
         public void Add(Order order);
+        public void Delete(Order order);
+        public Order? GetById(int id);
     }
 }

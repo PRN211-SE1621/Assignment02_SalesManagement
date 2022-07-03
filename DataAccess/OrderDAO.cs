@@ -40,10 +40,6 @@ namespace DataAccess
 
         public void Add(Order order)
         {
-            if (GetById(order.OrderId) != null)
-            {
-                throw new Exception("Product ID existed!");
-            }
             salesManagementContext.Orders.Add(order);
             salesManagementContext.SaveChanges();
         }

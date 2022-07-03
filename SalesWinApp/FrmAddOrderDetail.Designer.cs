@@ -32,20 +32,23 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtProductID = new System.Windows.Forms.TextBox();
+            this.lblProductID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvProductList
             // 
+            this.dgvProductList.AllowUserToAddRows = false;
+            this.dgvProductList.AllowUserToDeleteRows = false;
             this.dgvProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductList.Location = new System.Drawing.Point(73, 46);
             this.dgvProductList.Name = "dgvProductList";
+            this.dgvProductList.ReadOnly = true;
             this.dgvProductList.RowHeadersWidth = 51;
             this.dgvProductList.RowTemplate.Height = 29;
             this.dgvProductList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductList.Size = new System.Drawing.Size(652, 188);
             this.dgvProductList.TabIndex = 0;
-            this.dgvProductList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductList_CellContentClick);
             // 
             // btnAdd
             // 
@@ -69,17 +72,28 @@
             // 
             // txtProductID
             // 
-            this.txtProductID.Location = new System.Drawing.Point(73, 280);
+            this.txtProductID.Location = new System.Drawing.Point(161, 280);
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.Size = new System.Drawing.Size(125, 27);
             this.txtProductID.TabIndex = 3;
             this.txtProductID.TextChanged += new System.EventHandler(this.txtProductID_TextChanged);
+            // 
+            // lblProductID
+            // 
+            this.lblProductID.AutoSize = true;
+            this.lblProductID.Location = new System.Drawing.Point(75, 286);
+            this.lblProductID.Name = "lblProductID";
+            this.lblProductID.Size = new System.Drawing.Size(79, 20);
+            this.lblProductID.TabIndex = 4;
+            this.lblProductID.Text = "Product ID";
+            this.lblProductID.Click += new System.EventHandler(this.label1_Click);
             // 
             // FrmAddOrderDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 353);
+            this.Controls.Add(this.lblProductID);
             this.Controls.Add(this.txtProductID);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
@@ -99,5 +113,6 @@
         private Button btnAdd;
         private Button btnCancel;
         private TextBox txtProductID;
+        private Label lblProductID;
     }
 }

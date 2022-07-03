@@ -77,12 +77,8 @@ namespace SalesWinApp
                 if (orders.Count() == 0)
                 {
                     ClearText();
-                    btnDelete.Enabled = false;
                 }
-                else
-                {
-                    btnDelete.Enabled = true;
-                }
+
             }
             catch (Exception ex)
             {
@@ -118,6 +114,28 @@ namespace SalesWinApp
         {
             var frm = new FrmOrdersDetail();
             frm.Show();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmUpdateOrder frm = new FrmUpdateOrder()
+                {
+                    Order = orderRepository.GetById(Int32.Parse(txtOrderID.Text))
+                };
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }
