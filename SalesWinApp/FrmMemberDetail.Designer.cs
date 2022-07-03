@@ -202,6 +202,7 @@
             this.Controls.Add(this.lbCarID);
             this.Name = "FrmMemberDetail";
             this.Text = "FrmMemberDetail";
+            this.Load += new System.EventHandler(this.FrmMemberDetail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
