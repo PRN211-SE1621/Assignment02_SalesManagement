@@ -30,33 +30,92 @@ namespace DataAccess
                 }
             }
         }
-        public IEnumerable<Member> GetList() => salesManagementContext.Members.ToList();
-        public Member? GetById(int id) => salesManagementContext.Members.Single(m => m.MemberId.Equals(id));
+        public List<Member> GetList() => salesManagementContext.Members.ToList();
+        public Member? GetById(int id) => salesManagementContext.Members.SingleOrDefault<Member>(m => m.MemberId == id);
+
+        public Member? GetMemberByEmail(string email) => salesManagementContext.Members.SingleOrDefault<Member>(m => m.Email.Equals(email));
 
         public void Add(Member member)
         {
-            if (GetById(member.MemberId) != null)
+            try
             {
-                throw new Exception("Product ID existed!");
+                if (GetById(member.MemberId) != null)
+                {
+                    throw new Exception("Member ID existed!");
+                }
+                if (GetMemberByEmail(member.Email) != null)
+                {
+                    throw new Exception("Email existed");
+                }
+                salesManagementContext.Members.Add(member);
+                salesManagementContext.SaveChanges();
+            }catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
             }
-            salesManagementContext.Members.Add(member);
-            salesManagementContext.SaveChanges();
         }
 
         public void Delete(Member member)
         {
-            salesManagementContext.Members.Remove(member);
-            salesManagementContext.SaveChanges();
+            try
+            {
+                if (GetById(member.MemberId) == null)
+                {
+                    throw new Exception("Member does not already existed.");
+                }
+                salesManagementContext.Members.Remove(member);
+                salesManagementContext.SaveChanges();
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public void Update(Member member)
         {
-            salesManagementContext.Members.Update(member);
-            salesManagementContext.SaveChanges();
+            try
+            {
+                if (GetById(member.MemberId) == null)
+                {
+                    throw new Exception("Member does not already existed.");
+                }
+                salesManagementContext.Members.Update(member);
+                salesManagementContext.SaveChanges();
+            } catch (Exception e)
+            {
+                throw new Exception (e.Message);
+            }
         }
 
         public Member? CheckLogin(string email, string password)
             => salesManagementContext.Members.SingleOrDefault(m => (m.Email.Equals(email) && m.Password.Equals(password)));
+
+        public void ChangePassword (int id, string oldPassword, string newPassword)
+        {
+            try
+            {
+                Member? member = GetById(id);
+                if (member == null)
+                {
+                    throw new Exception("Member does not already existed.");
+                }
+                if(member.Password.Equals(oldPassword))
+                {
+                    member.Password = newPassword;
+                    salesManagementContext.Members.Update(member);
+                    salesManagementContext.SaveChanges();
+                }
+                else
+                {
+                    throw new Exception("Wrong password");
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
     }
 }
