@@ -25,15 +25,16 @@ namespace SalesWinApp
         public FrmUpdateOrder()
         {
             InitializeComponent();
+        }
+        private void FrmUpdateOrder_Load(object sender, EventArgs e)
+        {
+            ShowInfo();
+            LoadOrderGridView();
             productRepository = new ProductRepository();
             orderRepository = new OrderRepository();
             orderDetailRepository = new OrderDetailRepository();
-
         }
 
-        private void FrmOrdersDetail_Load(object sender, EventArgs e)
-        {
-        }
         private void ShowInfo()
         {
             if (Order != null)
@@ -108,35 +109,7 @@ namespace SalesWinApp
             this.Close();
         }
 
-        private void dgvProductList_DataSourceChanged(object sender, EventArgs e)
-        {
+      
 
-        }
-
-        private void FrmOrdersDetail_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FrmUpdateOrder_Load(object sender, EventArgs e)
-        {
-            ShowInfo();
-            LoadOrderGridView();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtOrderDate_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

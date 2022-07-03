@@ -184,7 +184,6 @@
             this.txtOrderID.Name = "txtOrderID";
             this.txtOrderID.Size = new System.Drawing.Size(262, 27);
             this.txtOrderID.TabIndex = 66;
-            this.txtOrderID.TextChanged += new System.EventHandler(this.txtOrderID_TextChanged);
             // 
             // lbReleaseYear
             // 

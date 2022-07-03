@@ -153,7 +153,6 @@
             this.dgvProductList.RowTemplate.Height = 29;
             this.dgvProductList.Size = new System.Drawing.Size(878, 164);
             this.dgvProductList.TabIndex = 93;
-            this.dgvProductList.DataSourceChanged += new System.EventHandler(this.dgvProductList_DataSourceChanged);
             // 
             // txtOrderID
             // 
@@ -162,7 +161,6 @@
             this.txtOrderID.Name = "txtOrderID";
             this.txtOrderID.Size = new System.Drawing.Size(279, 27);
             this.txtOrderID.TabIndex = 96;
-            this.txtOrderID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblOrderID
             // 
@@ -172,7 +170,6 @@
             this.lblOrderID.Size = new System.Drawing.Size(66, 20);
             this.lblOrderID.TabIndex = 95;
             this.lblOrderID.Text = "Order ID";
-            this.lblOrderID.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblOrderDate
             // 
@@ -190,7 +187,6 @@
             this.txtOrderDate.Name = "txtOrderDate";
             this.txtOrderDate.Size = new System.Drawing.Size(294, 27);
             this.txtOrderDate.TabIndex = 99;
-            this.txtOrderDate.ValueChanged += new System.EventHandler(this.txtOrderDate_ValueChanged);
             // 
             // FrmUpdateOrder
             // 

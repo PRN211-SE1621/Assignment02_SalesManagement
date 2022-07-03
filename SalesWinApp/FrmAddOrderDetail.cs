@@ -21,11 +21,11 @@ namespace SalesWinApp
         public FrmAddOrderDetail()
         {
             InitializeComponent();
-            productRepository = new ProductRepository();
         }
 
         private void FrmAddOrderDetail_Load(object sender, EventArgs e)
         {
+            productRepository = new ProductRepository();
             products = productRepository.GetAll();
             LoadOrderGridView(products);
             txtProductID.Enabled = false;
@@ -82,19 +82,9 @@ namespace SalesWinApp
             }
         }
 
-        private void txtProductID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -76,7 +76,6 @@
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.Size = new System.Drawing.Size(125, 27);
             this.txtProductID.TabIndex = 3;
-            this.txtProductID.TextChanged += new System.EventHandler(this.txtProductID_TextChanged);
             // 
             // lblProductID
             // 
@@ -86,7 +85,6 @@
             this.lblProductID.Size = new System.Drawing.Size(79, 20);
             this.lblProductID.TabIndex = 4;
             this.lblProductID.Text = "Product ID";
-            this.lblProductID.Click += new System.EventHandler(this.label1_Click);
             // 
             // FrmAddOrderDetail
             // 

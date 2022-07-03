@@ -24,6 +24,10 @@ namespace SalesWinApp
         public FrmOrdersManagement()
         {
             InitializeComponent();
+        }
+
+        private void FrmOrdersManagement_Load(object sender, EventArgs e)
+        {
             orderRepository = new OrderRepository();
             orderDetailRepository = new OrderDetailRepository();
             orders = orderRepository.GetAll();
@@ -41,15 +45,6 @@ namespace SalesWinApp
 
         }
 
-        private void txtRequiredDate_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtOrderID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
@@ -174,9 +169,5 @@ namespace SalesWinApp
             }
         }
 
-        private void FrmOrdersManagement_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
