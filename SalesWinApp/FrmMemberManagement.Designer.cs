@@ -83,6 +83,7 @@
             this.dgvMemberList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMemberList.Size = new System.Drawing.Size(1077, 258);
             this.dgvMemberList.TabIndex = 55;
+            this.dgvMemberList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMemberList_CellDoubleClick);
             // 
             // btnDelete
             // 
@@ -266,6 +267,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMemberManagement";
             this.Text = "FrmMemberManagement";
+            this.Load += new System.EventHandler(this.FrmMemberManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
