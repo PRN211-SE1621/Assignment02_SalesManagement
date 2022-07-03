@@ -32,6 +32,9 @@ namespace SalesWinApp
 
         }
 
-       
+        private void FrmMemberManagement_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

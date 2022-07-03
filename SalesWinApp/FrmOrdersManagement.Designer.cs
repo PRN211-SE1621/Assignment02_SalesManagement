@@ -330,6 +330,7 @@
             this.btnDelete.TabIndex = 90;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // FrmOrdersManagement
             // 
@@ -364,6 +365,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmOrdersManagement";
             this.Text = "FrmOrdersManagement";
+            this.Load += new System.EventHandler(this.FrmOrdersManagement_Load);
             this.groupBoxSearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).EndInit();
             this.menuStrip1.ResumeLayout(false);

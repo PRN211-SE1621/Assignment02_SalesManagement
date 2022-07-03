@@ -40,7 +40,6 @@
             this.txtShippedDate = new System.Windows.Forms.DateTimePicker();
             this.sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             this.dgvProductList = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.txtOrderID = new System.Windows.Forms.TextBox();
             this.lblOrderID = new System.Windows.Forms.Label();
             this.lblOrderDate = new System.Windows.Forms.Label();
@@ -156,17 +155,6 @@
             this.dgvProductList.TabIndex = 93;
             this.dgvProductList.DataSourceChanged += new System.EventHandler(this.dgvProductList_DataSourceChanged);
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(508, 238);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(217, 55);
-            this.btnAdd.TabIndex = 94;
-            this.btnAdd.Text = "Add New";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // txtOrderID
             // 
             this.txtOrderID.Location = new System.Drawing.Point(195, 57);
@@ -202,6 +190,7 @@
             this.txtOrderDate.Name = "txtOrderDate";
             this.txtOrderDate.Size = new System.Drawing.Size(294, 27);
             this.txtOrderDate.TabIndex = 99;
+            this.txtOrderDate.ValueChanged += new System.EventHandler(this.txtOrderDate_ValueChanged);
             // 
             // FrmUpdateOrder
             // 
@@ -212,7 +201,6 @@
             this.Controls.Add(this.lblOrderDate);
             this.Controls.Add(this.txtOrderID);
             this.Controls.Add(this.lblOrderID);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvProductList);
             this.Controls.Add(this.txtShippedDate);
             this.Controls.Add(this.txtRequiredDate);
@@ -248,7 +236,6 @@
         private DateTimePicker txtShippedDate;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
         private DataGridView dgvProductList;
-        private Button btnAdd;
         private TextBox txtOrderID;
         private Label lblOrderID;
         private Label lblOrderDate;

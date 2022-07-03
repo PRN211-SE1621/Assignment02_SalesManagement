@@ -19,11 +19,13 @@ namespace SalesWinApp
         private BindingSource bindingSource;
         private IEnumerable<Order>? orders;
         private IOrderRepository orderRepository;
+        private IOrderDetailRepository orderDetailRepository;
 
         public FrmOrdersManagement()
         {
             InitializeComponent();
             orderRepository = new OrderRepository();
+            orderDetailRepository = new OrderDetailRepository();
             orders = orderRepository.GetAll();
             LoadOrderGridView(orders);
         }
@@ -114,6 +116,11 @@ namespace SalesWinApp
         {
             var frm = new FrmOrdersDetail();
             frm.Show();
+            frm.FormClosed += delegate
+            {
+                orders = OrderDAO.Instance.GetList();
+                LoadOrderGridView(orders);
+            };
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -130,11 +137,45 @@ namespace SalesWinApp
                     Order = orderRepository.GetById(Int32.Parse(txtOrderID.Text))
                 };
                 frm.Show();
+                frm.FormClosed += delegate
+                {
+                    orders = OrderDAO.Instance.GetList();
+                    LoadOrderGridView(orders);
+                };
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var order = orderRepository.GetById(Int32.Parse(txtOrderID.Text));
+                if (MessageBox.Show("Do you want to delete this order?", "Delete order", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    orderRepository.Delete(order);
+                    MessageBox.Show("Deleted successfully?", "Delete order");
+                }
+                else
+                {
+                    MessageBox.Show("Delete fail?", "Delete order");
+                }
+                orders = OrderDAO.Instance.GetList();
+                LoadOrderGridView(orders);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void FrmOrdersManagement_Load(object sender, EventArgs e)
+        {
 
         }
     }

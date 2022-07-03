@@ -10,5 +10,6 @@ namespace DataAccess.Repository
     public interface IOrderDetailRepository
     {
         public void Add(OrderDetail orderDetail);
+        public void Delete(OrderDetail orderDetail);
      }
 }

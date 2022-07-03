@@ -37,5 +37,10 @@ namespace DataAccess
             salesManagementContext.OrderDetails.Add(od);
             salesManagementContext.SaveChanges();
         }
+        public void Delete(OrderDetail od)
+        {
+            salesManagementContext.OrderDetails.Remove(od);
+            salesManagementContext.SaveChanges();
+        }
     }
 }

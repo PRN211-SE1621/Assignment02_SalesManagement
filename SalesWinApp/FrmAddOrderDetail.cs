@@ -28,6 +28,7 @@ namespace SalesWinApp
         {
             products = productRepository.GetAll();
             LoadOrderGridView(products);
+            txtProductID.Enabled = false;
         }
 
 

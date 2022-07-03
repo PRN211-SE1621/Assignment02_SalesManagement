@@ -36,6 +36,8 @@ namespace SalesWinApp
         private void btnDelete_Click(object sender, EventArgs e)
         {
 
+
+
         }
 
         private void dgvMemberList_CellContentClick(object sender, DataGridViewCellEventArgs e)

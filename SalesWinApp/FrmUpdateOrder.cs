@@ -20,7 +20,6 @@ namespace SalesWinApp
         private IProductRepository productRepository;
         private IOrderDetailRepository orderDetailRepository;
         private IOrderRepository orderRepository;
-        public List<CartDTO> Cart = new List<CartDTO>();
         public Order? Order;
 
         public FrmUpdateOrder()
@@ -29,7 +28,6 @@ namespace SalesWinApp
             productRepository = new ProductRepository();
             orderRepository = new OrderRepository();
             orderDetailRepository = new OrderDetailRepository();
-            btnSave.Enabled = false;
 
         }
 
@@ -44,8 +42,11 @@ namespace SalesWinApp
                 txtOrderID.Text = Order.OrderId.ToString();
                 txtMemberID.Text = Order.MemberId.ToString();
                 txtOrderDate.CustomFormat = Order.MemberId.ToString();
-                txtShippedDate.CustomFormat = Order.MemberId.ToString();
-                txtRequiredDate.CustomFormat = Order.MemberId.ToString();
+                txtShippedDate.Value = Order.ShippedDate.Value;
+                txtRequiredDate.Value = Order.RequiredDate.Value;
+                txtOrderID.Enabled = false;
+                txtMemberID.Enabled = false;
+                txtOrderDate.Enabled = false;
             }
         }
 
@@ -66,7 +67,7 @@ namespace SalesWinApp
             try
             {
                 bindingSource = new BindingSource();
-                bindingSource.DataSource = Order;
+                bindingSource.DataSource = Order?.OrderDetails;
                 dgvProductList.DataSource = bindingSource;
             }
             catch (Exception ex)
@@ -79,32 +80,22 @@ namespace SalesWinApp
         {
             try
             {
-                List<OrderDetail> list = new List<OrderDetail>();
-                Cart.ForEach(c =>
-                {
-                    OrderDetail od = new OrderDetail()
-                    {
-                        ProductId = c.ProductId,
-                        UnitPrice = c.UnitPrice,
-                        Quantity = c.Quantity,
-                    };
-                    list.Add(od);
-                });
-                var order = new Order()
-                {
-                    MemberId = Int32.Parse(txtMemberID.Text),
-                    OrderDate = DateTime.Now,
-                    ShippedDate = Convert.ToDateTime(txtShippedDate.Value),
-                    RequiredDate = Convert.ToDateTime(txtRequiredDate.Value),
-                    Freight = decimal.Parse(txtFreight.Text),
-                    OrderDetails = list
-                };
-                orderRepository.Add(order);
+                var or = orderRepository.GetById(Int32.Parse(txtOrderID.Text));
 
-                if (MessageBox.Show("Added successfully!") == DialogResult.OK)
+                if (or != null)
                 {
-                    this.Close();
+                    or.OrderDate = Convert.ToDateTime(txtOrderDate.Value);
+                    or.Freight = decimal.Parse(txtFreight.Text);
+                    or.ShippedDate = Convert.ToDateTime(txtShippedDate.Value);
+                    or.RequiredDate = Convert.ToDateTime(txtRequiredDate.Value);
+                    orderRepository.Update(or);
+                  
+                    if (MessageBox.Show("Update successfully!") == DialogResult.OK)
+                    {
+                        this.Close();
+                    }
                 }
+
             }
             catch (Exception ex)
             {
@@ -119,14 +110,7 @@ namespace SalesWinApp
 
         private void dgvProductList_DataSourceChanged(object sender, EventArgs e)
         {
-            if (Cart.Count == 0)
-            {
-                btnSave.Enabled = false;
-            }
-            else
-            {
-                btnSave.Enabled = true;
-            }
+
         }
 
         private void FrmOrdersDetail_Load_1(object sender, EventArgs e)
@@ -146,6 +130,11 @@ namespace SalesWinApp
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtOrderDate_ValueChanged(object sender, EventArgs e)
         {
 
         }

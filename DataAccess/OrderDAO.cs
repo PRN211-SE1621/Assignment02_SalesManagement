@@ -52,7 +52,8 @@ namespace DataAccess
 
         public void Update(Order order)
         {
-            salesManagementContext.Orders.Update(order);
+            salesManagementContext.Update<Order>(order);
+            //salesManagementContext.Orders.Update(order);
             salesManagementContext.SaveChanges();
         }
 

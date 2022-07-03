@@ -25,18 +25,21 @@ namespace SalesWinApp
         public FrmOrdersDetail()
         {
             InitializeComponent();
-            productRepository = new ProductRepository();
-            orderRepository = new OrderRepository();
-            orderDetailRepository = new OrderDetailRepository();
-
-            btnSave.Enabled = false;
-
         }
 
         private void FrmOrdersDetail_Load(object sender, EventArgs e)
         {
             LoadOrderGridView();
+            productRepository = new ProductRepository();
+            orderRepository = new OrderRepository();
+            orderDetailRepository = new OrderDetailRepository();
 
+            txtProductID.Enabled = false;
+            btnSave.Enabled = false;
+            if (Cart.Count == 0)
+            {
+                btnRemove.Enabled = false;
+            }
         }
 
 
@@ -59,6 +62,17 @@ namespace SalesWinApp
                 bindingSource = new BindingSource();
                 bindingSource.DataSource = Cart;
                 dgvProductList.DataSource = bindingSource;
+                txtProductID.DataBindings.Clear();
+                txtProductID.DataBindings.Add("Text", bindingSource, "ProductId");
+                if (Cart.Count == 0)
+                {
+                    btnRemove.Enabled = false;
+                    txtProductID.Text = "";
+                }
+                else
+                {
+                    btnRemove.Enabled = true;
+                }
             }
             catch (Exception ex)
             {
@@ -120,9 +134,15 @@ namespace SalesWinApp
             }
         }
 
-        private void FrmOrdersDetail_Load_1(object sender, EventArgs e)
+        private void btnRemove_Click(object sender, EventArgs e)
         {
-
+            var cartDTO = Cart.ToList().SingleOrDefault(c => c.ProductId == Int32.Parse(txtProductID.Text));
+            if (cartDTO != null)
+            {
+                Cart.Remove(cartDTO);
+            }
+            LoadOrderGridView();
         }
+
     }
 }

@@ -14,6 +14,7 @@ namespace DataAccess.Repository
         public void Add(Order order) => OrderDAO.Instance.Add(order);
 
         public void Delete(Order order) => OrderDAO.Instance.Delete(order);
+        public void Update(Order order) => OrderDAO.Instance.Update(order);
 
         public Order? GetById(int id) => OrderDAO.Instance.GetById(id);
     }
