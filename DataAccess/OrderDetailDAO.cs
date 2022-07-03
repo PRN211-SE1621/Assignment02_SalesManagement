@@ -32,6 +32,10 @@ namespace DataAccess
         }
 
         public IEnumerable<OrderDetail> GetListByOrderId(int orderId) => salesManagementContext.OrderDetails.Where(o => o.OrderId.Equals(orderId)).ToList();
-
+        public void Add(OrderDetail od)
+        {
+            salesManagementContext.OrderDetails.Add(od);
+            salesManagementContext.SaveChanges();
+        }
     }
 }

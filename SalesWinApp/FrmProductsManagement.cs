@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessObject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace SalesWinApp
 {
     public partial class FrmProductsManagement : Form
     {
+
         public FrmProductsManagement()
         {
             InitializeComponent();
@@ -29,10 +31,19 @@ namespace SalesWinApp
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvMemberList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void FrmProductsManagement_Load(object sender, EventArgs e)
         {
 
         }

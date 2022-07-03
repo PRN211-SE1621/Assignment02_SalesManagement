@@ -33,6 +33,7 @@ namespace DataAccess
         }
 
         public IEnumerable<Order> GetList() => salesManagementContext.Orders.Include(o => o.OrderDetails).ToList();
+        public IEnumerable<Order> GetListIgnore() => salesManagementContext.Orders.IgnoreAutoIncludes().ToList();
         public IEnumerable<Order> GetListByMemberId(int memberId) => salesManagementContext.Orders.Where(o => o.Member.MemberId.Equals(memberId));
 
         public Order? GetById(int orderId) => salesManagementContext.Orders.SingleOrDefault(o => o.OrderId.Equals(orderId));
