@@ -57,6 +57,7 @@
             // 
             // btnSave
             // 
+            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnSave.Location = new System.Drawing.Point(235, 247);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
@@ -189,6 +190,7 @@
             this.Controls.Add(this.lbCarID);
             this.Name = "FrmProductDetail";
             this.Text = "FrmProductDetail";
+            this.Load += new System.EventHandler(this.FrmProductDetail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

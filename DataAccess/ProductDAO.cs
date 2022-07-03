@@ -50,7 +50,10 @@ namespace DataAccess
             salesManagementContext.Products.Remove(product);
             salesManagementContext.SaveChanges();
         }
-
+        public void Update(Product updatedProductInfo)
+        {
+            salesManagementContext.Products.Update(updatedProductInfo);
+        }
         public IEnumerable<Product> SearchByName(string searchKey) 
             => salesManagementContext.Products.Where(p => p.ProductName.ToUpper().Contains(searchKey)).ToList();
 
