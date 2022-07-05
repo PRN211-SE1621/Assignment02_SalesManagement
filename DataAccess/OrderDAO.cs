@@ -33,16 +33,13 @@ namespace DataAccess
         }
 
         public IEnumerable<Order> GetList() => salesManagementContext.Orders.Include(o => o.OrderDetails).ToList();
+        public IEnumerable<Order> GetListIgnore() => salesManagementContext.Orders.IgnoreAutoIncludes().ToList();
         public IEnumerable<Order> GetListByMemberId(int memberId) => salesManagementContext.Orders.Where(o => o.Member.MemberId.Equals(memberId));
 
         public Order? GetById(int orderId) => salesManagementContext.Orders.SingleOrDefault(o => o.OrderId.Equals(orderId));
 
         public void Add(Order order)
         {
-            if (GetById(order.OrderId) != null)
-            {
-                throw new Exception("Product ID existed!");
-            }
             salesManagementContext.Orders.Add(order);
             salesManagementContext.SaveChanges();
         }
@@ -55,7 +52,8 @@ namespace DataAccess
 
         public void Update(Order order)
         {
-            salesManagementContext.Orders.Update(order);
+            salesManagementContext.Update<Order>(order);
+            //salesManagementContext.Orders.Update(order);
             salesManagementContext.SaveChanges();
         }
 
