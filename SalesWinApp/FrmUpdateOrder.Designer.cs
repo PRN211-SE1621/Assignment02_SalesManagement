@@ -1,6 +1,6 @@
 ﻿namespace SalesWinApp
 {
-    partial class FrmOrdersDetail
+    partial class FrmUpdateOrder
     {
         /// <summary>
         /// Required designer variable.
@@ -40,16 +40,16 @@
             this.txtShippedDate = new System.Windows.Forms.DateTimePicker();
             this.sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             this.dgvProductList = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.lblProductID = new System.Windows.Forms.Label();
-            this.txtProductID = new System.Windows.Forms.TextBox();
+            this.txtOrderID = new System.Windows.Forms.TextBox();
+            this.lblOrderID = new System.Windows.Forms.Label();
+            this.lblOrderDate = new System.Windows.Forms.Label();
+            this.txtOrderDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(828, 166);
+            this.btnCancel.Location = new System.Drawing.Point(828, 238);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(107, 55);
@@ -60,7 +60,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(312, 166);
+            this.btnSave.Location = new System.Drawing.Point(367, 238);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(107, 55);
@@ -71,7 +71,7 @@
             // 
             // txtMemberID
             // 
-            this.txtMemberID.Location = new System.Drawing.Point(195, 48);
+            this.txtMemberID.Location = new System.Drawing.Point(195, 114);
             this.txtMemberID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMemberID.Name = "txtMemberID";
             this.txtMemberID.Size = new System.Drawing.Size(279, 27);
@@ -79,7 +79,7 @@
             // 
             // txtFreight
             // 
-            this.txtFreight.Location = new System.Drawing.Point(195, 108);
+            this.txtFreight.Location = new System.Drawing.Point(195, 174);
             this.txtFreight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFreight.Name = "txtFreight";
             this.txtFreight.Size = new System.Drawing.Size(279, 27);
@@ -88,7 +88,7 @@
             // lbReleaseYear
             // 
             this.lbReleaseYear.AutoSize = true;
-            this.lbReleaseYear.Location = new System.Drawing.Point(508, 115);
+            this.lbReleaseYear.Location = new System.Drawing.Point(508, 181);
             this.lbReleaseYear.Name = "lbReleaseYear";
             this.lbReleaseYear.Size = new System.Drawing.Size(100, 20);
             this.lbReleaseYear.TabIndex = 80;
@@ -97,7 +97,7 @@
             // lbPrice
             // 
             this.lbPrice.AutoSize = true;
-            this.lbPrice.Location = new System.Drawing.Point(508, 53);
+            this.lbPrice.Location = new System.Drawing.Point(508, 119);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(105, 20);
             this.lbPrice.TabIndex = 79;
@@ -106,7 +106,7 @@
             // lbManufacturer
             // 
             this.lbManufacturer.AutoSize = true;
-            this.lbManufacturer.Location = new System.Drawing.Point(63, 112);
+            this.lbManufacturer.Location = new System.Drawing.Point(63, 178);
             this.lbManufacturer.Name = "lbManufacturer";
             this.lbManufacturer.Size = new System.Drawing.Size(55, 20);
             this.lbManufacturer.TabIndex = 78;
@@ -115,7 +115,7 @@
             // lbCarName
             // 
             this.lbCarName.AutoSize = true;
-            this.lbCarName.Location = new System.Drawing.Point(63, 48);
+            this.lbCarName.Location = new System.Drawing.Point(63, 114);
             this.lbCarName.Name = "lbCarName";
             this.lbCarName.Size = new System.Drawing.Size(84, 20);
             this.lbCarName.TabIndex = 77;
@@ -123,7 +123,7 @@
             // 
             // txtRequiredDate
             // 
-            this.txtRequiredDate.Location = new System.Drawing.Point(641, 51);
+            this.txtRequiredDate.Location = new System.Drawing.Point(641, 117);
             this.txtRequiredDate.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtRequiredDate.Name = "txtRequiredDate";
             this.txtRequiredDate.Size = new System.Drawing.Size(294, 27);
@@ -131,7 +131,7 @@
             // 
             // txtShippedDate
             // 
-            this.txtShippedDate.Location = new System.Drawing.Point(641, 111);
+            this.txtShippedDate.Location = new System.Drawing.Point(641, 177);
             this.txtShippedDate.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtShippedDate.Name = "txtShippedDate";
             this.txtShippedDate.Size = new System.Drawing.Size(294, 27);
@@ -146,67 +146,57 @@
             // 
             // dgvProductList
             // 
-            this.dgvProductList.AllowUserToAddRows = false;
-            this.dgvProductList.AllowUserToDeleteRows = false;
             this.dgvProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductList.Location = new System.Drawing.Point(63, 250);
+            this.dgvProductList.Location = new System.Drawing.Point(63, 326);
             this.dgvProductList.Name = "dgvProductList";
-            this.dgvProductList.ReadOnly = true;
             this.dgvProductList.RowHeadersWidth = 51;
             this.dgvProductList.RowTemplate.Height = 29;
-            this.dgvProductList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProductList.Size = new System.Drawing.Size(878, 164);
             this.dgvProductList.TabIndex = 93;
-            this.dgvProductList.DataSourceChanged += new System.EventHandler(this.dgvProductList_DataSourceChanged);
             // 
-            // btnAdd
+            // txtOrderID
             // 
-            this.btnAdd.Location = new System.Drawing.Point(443, 166);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(217, 55);
-            this.btnAdd.TabIndex = 94;
-            this.btnAdd.Text = "Add New";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.txtOrderID.Location = new System.Drawing.Point(195, 57);
+            this.txtOrderID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtOrderID.Name = "txtOrderID";
+            this.txtOrderID.Size = new System.Drawing.Size(279, 27);
+            this.txtOrderID.TabIndex = 96;
             // 
-            // btnRemove
+            // lblOrderID
             // 
-            this.btnRemove.Location = new System.Drawing.Point(682, 166);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(107, 55);
-            this.btnRemove.TabIndex = 95;
-            this.btnRemove.Text = "Remove";
-            this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            this.lblOrderID.AutoSize = true;
+            this.lblOrderID.Location = new System.Drawing.Point(63, 57);
+            this.lblOrderID.Name = "lblOrderID";
+            this.lblOrderID.Size = new System.Drawing.Size(66, 20);
+            this.lblOrderID.TabIndex = 95;
+            this.lblOrderID.Text = "Order ID";
             // 
-            // lblProductID
+            // lblOrderDate
             // 
-            this.lblProductID.AutoSize = true;
-            this.lblProductID.Location = new System.Drawing.Point(64, 180);
-            this.lblProductID.Name = "lblProductID";
-            this.lblProductID.Size = new System.Drawing.Size(79, 20);
-            this.lblProductID.TabIndex = 96;
-            this.lblProductID.Text = "Product ID";
+            this.lblOrderDate.AutoSize = true;
+            this.lblOrderDate.Location = new System.Drawing.Point(508, 60);
+            this.lblOrderDate.Name = "lblOrderDate";
+            this.lblOrderDate.Size = new System.Drawing.Size(83, 20);
+            this.lblOrderDate.TabIndex = 98;
+            this.lblOrderDate.Text = "Order Date";
             // 
-            // txtProductID
+            // txtOrderDate
             // 
-            this.txtProductID.Location = new System.Drawing.Point(168, 180);
-            this.txtProductID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtProductID.Name = "txtProductID";
-            this.txtProductID.Size = new System.Drawing.Size(124, 27);
-            this.txtProductID.TabIndex = 97;
+            this.txtOrderDate.Location = new System.Drawing.Point(641, 55);
+            this.txtOrderDate.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txtOrderDate.Name = "txtOrderDate";
+            this.txtOrderDate.Size = new System.Drawing.Size(294, 27);
+            this.txtOrderDate.TabIndex = 99;
             // 
-            // FrmOrdersDetail
+            // FrmUpdateOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(975, 444);
-            this.Controls.Add(this.txtProductID);
-            this.Controls.Add(this.lblProductID);
-            this.Controls.Add(this.btnRemove);
-            this.Controls.Add(this.btnAdd);
+            this.ClientSize = new System.Drawing.Size(975, 524);
+            this.Controls.Add(this.txtOrderDate);
+            this.Controls.Add(this.lblOrderDate);
+            this.Controls.Add(this.txtOrderID);
+            this.Controls.Add(this.lblOrderID);
             this.Controls.Add(this.dgvProductList);
             this.Controls.Add(this.txtShippedDate);
             this.Controls.Add(this.txtRequiredDate);
@@ -219,9 +209,9 @@
             this.Controls.Add(this.lbManufacturer);
             this.Controls.Add(this.lbCarName);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "FrmOrdersDetail";
-            this.Text = "FrmOrdersDetail";
-            this.Load += new System.EventHandler(this.FrmOrdersDetail_Load);
+            this.Name = "FrmUpdateOrder";
+            this.Text = "FrmUpdateOrder";
+            this.Load += new System.EventHandler(this.FrmUpdateOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -242,9 +232,9 @@
         private DateTimePicker txtShippedDate;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
         private DataGridView dgvProductList;
-        private Button btnAdd;
-        private Button btnRemove;
-        private Label lblProductID;
-        private TextBox txtProductID;
+        private TextBox txtOrderID;
+        private Label lblOrderID;
+        private Label lblOrderDate;
+        private DateTimePicker txtOrderDate;
     }
 }

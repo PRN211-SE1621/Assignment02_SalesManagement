@@ -9,6 +9,8 @@ namespace DataAccess.Repository
 {
     public class ProductRepository : IProductRepository
     {
+        public IEnumerable<Product> GetAll() => ProductDAO.Instance.GetList();
+        public Product? GetById(int id) => ProductDAO.Instance.GetById(id);
         public void CreateProduct(Product p) => ProductDAO.Instance.Add(p);
 
         public void DeleteProduct(int id)=>ProductDAO.Instance.Delete(GetProductById(id));

@@ -72,8 +72,6 @@ namespace DataAccess
             {
                 entity.ToTable("Order");
 
-                entity.Property(e => e.OrderId).ValueGeneratedNever();
-
                 entity.Property(e => e.Freight).HasColumnType("money");
 
                 entity.Property(e => e.OrderDate).HasColumnType("datetime");
@@ -100,7 +98,7 @@ namespace DataAccess
                 entity.HasOne(d => d.Order)
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.OrderId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_OrderDetail_Order");
 
                 entity.HasOne(d => d.Product)
