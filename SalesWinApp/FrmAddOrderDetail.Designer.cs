@@ -97,6 +97,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dgvProductList);
             this.Name = "FrmAddOrderDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New Product";
             this.Load += new System.EventHandler(this.FrmAddOrderDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).EndInit();

@@ -267,18 +267,21 @@
             this.toolTripMenuItemMemberManagement.Name = "toolTripMenuItemMemberManagement";
             this.toolTripMenuItemMemberManagement.Size = new System.Drawing.Size(240, 26);
             this.toolTripMenuItemMemberManagement.Text = "Member Management";
+            this.toolTripMenuItemMemberManagement.Click += new System.EventHandler(this.toolTripMenuItemMemberManagement_Click);
             // 
             // toolTripMenuItemOrderManagement
             // 
             this.toolTripMenuItemOrderManagement.Name = "toolTripMenuItemOrderManagement";
             this.toolTripMenuItemOrderManagement.Size = new System.Drawing.Size(240, 26);
             this.toolTripMenuItemOrderManagement.Text = "Order Management";
+            this.toolTripMenuItemOrderManagement.Click += new System.EventHandler(this.toolTripMenuItemOrderManagement_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // btnCancel
             // 
@@ -363,7 +366,8 @@
             this.Controls.Add(this.lbCarID);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmOrdersManagement";
-            this.Text = "FrmOrdersManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Order Management";
             this.Load += new System.EventHandler(this.FrmOrdersManagement_Load);
             this.groupBoxSearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).EndInit();

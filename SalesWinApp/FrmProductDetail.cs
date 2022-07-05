@@ -29,7 +29,7 @@ namespace SalesWinApp
                 var product = new Product
                 {
                     ProductId = int.Parse(txtProductID.Text),
-                    ProductName = txtProductID.Text,
+                    ProductName = txtProductName.Text,
                     CategoryId = int.Parse(txtCategoryID.Text),
                     UnitPrice = decimal.Parse(txtUnitPrice.Text),
                     Weight = txtWeight.Text,

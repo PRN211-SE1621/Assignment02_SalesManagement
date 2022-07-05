@@ -76,7 +76,6 @@
             this.dgvMemberList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMemberList.Location = new System.Drawing.Point(49, 277);
             this.dgvMemberList.Name = "dgvMemberList";
-            this.dgvMemberList.ReadOnly = true;
             this.dgvMemberList.RowHeadersWidth = 51;
             this.dgvMemberList.RowTemplate.Height = 29;
             this.dgvMemberList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -222,18 +221,21 @@
             this.toolTripMenuItemProductManagement.Name = "toolTripMenuItemProductManagement";
             this.toolTripMenuItemProductManagement.Size = new System.Drawing.Size(235, 26);
             this.toolTripMenuItemProductManagement.Text = "Product Management";
+            this.toolTripMenuItemProductManagement.Click += new System.EventHandler(this.toolTripMenuItemProductManagement_Click);
             // 
             // toolTripMenuItemOrderManagement
             // 
             this.toolTripMenuItemOrderManagement.Name = "toolTripMenuItemOrderManagement";
             this.toolTripMenuItemOrderManagement.Size = new System.Drawing.Size(235, 26);
             this.toolTripMenuItemOrderManagement.Text = "Order Management";
+            this.toolTripMenuItemOrderManagement.Click += new System.EventHandler(this.toolTripMenuItemOrderManagement_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // FrmMemberManagement
             // 
@@ -260,7 +262,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmMemberManagement";
-            this.Text = "FrmMemberManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Member Management";
             this.Load += new System.EventHandler(this.FrmMemberManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).EndInit();
             this.menuStrip1.ResumeLayout(false);

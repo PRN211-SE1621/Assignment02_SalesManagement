@@ -72,7 +72,8 @@
             this.Controls.Add(this.btnProductManagement);
             this.Controls.Add(this.btnMemberManagement);
             this.Name = "FrmAdmin";
-            this.Text = "FrmAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Admin Form";
             this.ResumeLayout(false);
 
         }

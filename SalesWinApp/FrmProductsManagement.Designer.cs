@@ -179,7 +179,7 @@
             // 
             this.dgvMemberList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMemberList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMemberList.Location = new System.Drawing.Point(38, 443);
+            this.dgvMemberList.Location = new System.Drawing.Point(34, 434);
             this.dgvMemberList.Name = "dgvMemberList";
             this.dgvMemberList.ReadOnly = true;
             this.dgvMemberList.RowHeadersWidth = 51;
@@ -327,18 +327,21 @@
             this.toolTripMenuItemMemberManagement.Name = "toolTripMenuItemMemberManagement";
             this.toolTripMenuItemMemberManagement.Size = new System.Drawing.Size(240, 26);
             this.toolTripMenuItemMemberManagement.Text = "Member Management";
+            this.toolTripMenuItemMemberManagement.Click += new System.EventHandler(this.toolTripMenuItemMemberManagement_Click);
             // 
             // toolTripMenuItemOrderManagement
             // 
             this.toolTripMenuItemOrderManagement.Name = "toolTripMenuItemOrderManagement";
             this.toolTripMenuItemOrderManagement.Size = new System.Drawing.Size(240, 26);
             this.toolTripMenuItemOrderManagement.Text = "Order Management";
+            this.toolTripMenuItemOrderManagement.Click += new System.EventHandler(this.toolTripMenuItemOrderManagement_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // FrmProductsManagement
             // 
@@ -365,7 +368,8 @@
             this.Controls.Add(this.lbCarID);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmProductsManagement";
-            this.Text = "FrmProductsManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Product Management";
             this.Load += new System.EventHandler(this.FrmProductsManagement_Load);
             this.groupBoxSearch.ResumeLayout(false);
             this.groupBoxSearch.PerformLayout();

@@ -148,11 +148,45 @@ namespace SalesWinApp
                 proRepository = proRepo,
                 ProductInfo = GetProductObject()
             };
-            if (frmProductDetail.ShowDialog() == DialogResult.OK)
+            frmProductDetail.Show();
+            //if (frmProductDetail.ShowDialog() == DialogResult.OK)
+            //{
+             //   LoadProductsToGridView(proRepo.GetAllProducts());
+             //   bindingSource.Position = bindingSource.Count - 1;
+            //}
+        }
+
+        private void dgvMemberList_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            FrmProductDetail frmProductDetail = new FrmProductDetail
             {
-                LoadProductsToGridView(proRepo.GetAllProducts());
-                bindingSource.Position = bindingSource.Count - 1;
-            }
+                Text = "Update Product",
+                InsertOrUpdate = true,
+                proRepository = proRepo,
+                ProductInfo = GetProductObject()
+            };
+            frmProductDetail.Show();
+        }
+
+        private void toolTripMenuItemMemberManagement_Click(object sender, EventArgs e)
+        {
+            FrmMemberManagement frmMemberManagement = new FrmMemberManagement();
+            frmMemberManagement.Show();
+            this.Close();
+            this.Dispose();
+        }
+
+        private void toolTripMenuItemOrderManagement_Click(object sender, EventArgs e)
+        {
+            FrmOrdersManagement frmOrdersManagement = new FrmOrdersManagement();
+            frmOrdersManagement.Show();
+            this.Close();
+            this.Dispose();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -210,7 +210,8 @@
             this.Controls.Add(this.lbCarName);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmUpdateOrder";
-            this.Text = "FrmUpdateOrder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Update Order";
             this.Load += new System.EventHandler(this.FrmUpdateOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).EndInit();
             this.ResumeLayout(false);
