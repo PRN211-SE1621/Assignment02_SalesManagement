@@ -32,23 +32,26 @@ namespace SalesWinApp
                 }
                 else
                 {
-                    var member = new Member
+                    if (!InsertOrUpdate)
                     {
-                        MemberId = int.Parse(txtMemberId.Text),
-                        CompanyName = txtCompanyName.Text,
-                        City = txtCity.Text,
-                        Country = txtCountry.Text,
-                        Email = txtEmail.Text,
-                        Password = MemberInfo == null ? txtPassword.Text : MemberInfo.Password,
-                    };
+                        MemberInfo = new ();
+                        MemberInfo.Password = txtPassword.Text;
+                        MemberInfo.MemberId = int.Parse(txtMemberId.Text);
+                    }
+
+                    MemberInfo.CompanyName = txtCompanyName.Text;
+                    MemberInfo.City = txtCity.Text;
+                    MemberInfo.Country = txtCountry.Text;
+                    MemberInfo.Email = txtEmail.Text;
+
                     if (InsertOrUpdate)
                     {
-                        MemberRepository.UpdateMember(member);
+                        MemberRepository.UpdateMember(MemberInfo);
                         MessageBox.Show("Update successfully.");
                     }
                     else
                     {
-                        MemberRepository.CreateMember(member);
+                        MemberRepository.CreateMember(MemberInfo);
                         MessageBox.Show("Add successfully.");
                     }
                 }
@@ -91,12 +94,16 @@ namespace SalesWinApp
             txtEmail.Enabled = !InsertOrUpdate;
             if (InsertOrUpdate == true)
             {
-                txtMemberId.Text = MemberInfo.MemberId.ToString();
-                txtEmail.Text = MemberInfo.Email.ToString();
-                txtCompanyName.Text = MemberInfo.CompanyName.ToString();
-                txtCountry.Text = MemberInfo.Country.ToString();
-                txtPassword.Text = "******";
-                txtCity.Text = MemberInfo.City.ToString();
+                if(MemberInfo != null)
+                {
+                    txtMemberId.Text = MemberInfo.MemberId.ToString();
+                    txtEmail.Text = MemberInfo.Email.ToString();
+                    txtCompanyName.Text = MemberInfo.CompanyName.ToString();
+                    txtCountry.Text = MemberInfo.Country.ToString();
+                    txtPassword.Text = "******";
+                    txtCity.Text = MemberInfo.City.ToString();
+                }    
+          
             }
             else
             {

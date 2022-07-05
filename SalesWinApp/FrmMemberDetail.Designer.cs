@@ -47,10 +47,9 @@
             // 
             // btnChangePassword
             // 
-            this.btnChangePassword.Location = new System.Drawing.Point(342, 256);
-            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnChangePassword.Location = new System.Drawing.Point(391, 341);
             this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(118, 35);
+            this.btnChangePassword.Size = new System.Drawing.Size(135, 47);
             this.btnChangePassword.TabIndex = 61;
             this.btnChangePassword.Text = "Change Password";
             this.btnChangePassword.UseVisualStyleBackColor = true;
@@ -58,10 +57,9 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(217, 256);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Location = new System.Drawing.Point(248, 341);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(82, 35);
+            this.btnCancel.Size = new System.Drawing.Size(94, 47);
             this.btnCancel.TabIndex = 60;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -69,10 +67,9 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(92, 256);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Location = new System.Drawing.Point(105, 341);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(82, 35);
+            this.btnSave.Size = new System.Drawing.Size(94, 47);
             this.btnSave.TabIndex = 59;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -80,111 +77,105 @@
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(138, 98);
-            this.txtCountry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCountry.Location = new System.Drawing.Point(158, 131);
             this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(322, 23);
+            this.txtCountry.Size = new System.Drawing.Size(367, 27);
             this.txtCountry.TabIndex = 58;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 100);
+            this.label1.Location = new System.Drawing.Point(46, 133);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 15);
+            this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 57;
             this.label1.Text = "Country";
             // 
             // txtCompanyName
             // 
-            this.txtCompanyName.Location = new System.Drawing.Point(140, 62);
-            this.txtCompanyName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCompanyName.Location = new System.Drawing.Point(160, 83);
             this.txtCompanyName.Name = "txtCompanyName";
-            this.txtCompanyName.Size = new System.Drawing.Size(320, 23);
+            this.txtCompanyName.Size = new System.Drawing.Size(365, 27);
             this.txtCompanyName.TabIndex = 56;
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(138, 206);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCity.Location = new System.Drawing.Point(158, 275);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(322, 23);
+            this.txtCity.Size = new System.Drawing.Size(367, 27);
             this.txtCity.TabIndex = 55;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(138, 134);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.Location = new System.Drawing.Point(158, 179);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(322, 23);
+            this.txtEmail.Size = new System.Drawing.Size(367, 27);
             this.txtEmail.TabIndex = 54;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(138, 170);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Location = new System.Drawing.Point(158, 227);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(322, 23);
+            this.txtPassword.Size = new System.Drawing.Size(367, 27);
             this.txtPassword.TabIndex = 53;
             // 
             // txtMemberId
             // 
-            this.txtMemberId.Location = new System.Drawing.Point(140, 26);
-            this.txtMemberId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMemberId.Location = new System.Drawing.Point(160, 35);
             this.txtMemberId.Name = "txtMemberId";
-            this.txtMemberId.Size = new System.Drawing.Size(320, 23);
+            this.txtMemberId.Size = new System.Drawing.Size(365, 27);
             this.txtMemberId.TabIndex = 52;
             // 
             // lbReleaseYear
             // 
             this.lbReleaseYear.AutoSize = true;
-            this.lbReleaseYear.Location = new System.Drawing.Point(40, 170);
+            this.lbReleaseYear.Location = new System.Drawing.Point(46, 227);
             this.lbReleaseYear.Name = "lbReleaseYear";
-            this.lbReleaseYear.Size = new System.Drawing.Size(57, 15);
+            this.lbReleaseYear.Size = new System.Drawing.Size(70, 20);
             this.lbReleaseYear.TabIndex = 51;
             this.lbReleaseYear.Text = "Password";
             // 
             // lbPrice
             // 
             this.lbPrice.AutoSize = true;
-            this.lbPrice.Location = new System.Drawing.Point(40, 136);
+            this.lbPrice.Location = new System.Drawing.Point(46, 181);
             this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(36, 15);
+            this.lbPrice.Size = new System.Drawing.Size(46, 20);
             this.lbPrice.TabIndex = 50;
             this.lbPrice.Text = "Email";
             // 
             // lbManufacturer
             // 
             this.lbManufacturer.AutoSize = true;
-            this.lbManufacturer.Location = new System.Drawing.Point(40, 208);
+            this.lbManufacturer.Location = new System.Drawing.Point(46, 277);
             this.lbManufacturer.Name = "lbManufacturer";
-            this.lbManufacturer.Size = new System.Drawing.Size(28, 15);
+            this.lbManufacturer.Size = new System.Drawing.Size(34, 20);
             this.lbManufacturer.TabIndex = 49;
             this.lbManufacturer.Text = "City";
             // 
             // lbCarName
             // 
             this.lbCarName.AutoSize = true;
-            this.lbCarName.Location = new System.Drawing.Point(40, 62);
+            this.lbCarName.Location = new System.Drawing.Point(46, 83);
             this.lbCarName.Name = "lbCarName";
-            this.lbCarName.Size = new System.Drawing.Size(94, 15);
+            this.lbCarName.Size = new System.Drawing.Size(116, 20);
             this.lbCarName.TabIndex = 48;
             this.lbCarName.Text = "Company Name";
             // 
             // lbCarID
             // 
             this.lbCarID.AutoSize = true;
-            this.lbCarID.Location = new System.Drawing.Point(40, 28);
+            this.lbCarID.Location = new System.Drawing.Point(46, 37);
             this.lbCarID.Name = "lbCarID";
-            this.lbCarID.Size = new System.Drawing.Size(66, 15);
+            this.lbCarID.Size = new System.Drawing.Size(84, 20);
             this.lbCarID.TabIndex = 47;
             this.lbCarID.Text = "Member ID";
             // 
             // FrmMemberDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 314);
+            this.ClientSize = new System.Drawing.Size(603, 419);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -200,6 +191,7 @@
             this.Controls.Add(this.lbManufacturer);
             this.Controls.Add(this.lbCarName);
             this.Controls.Add(this.lbCarID);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmMemberDetail";
             this.Text = "FrmMemberDetail";
             this.Load += new System.EventHandler(this.FrmMemberDetail_Load);

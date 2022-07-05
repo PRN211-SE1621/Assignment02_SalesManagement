@@ -37,58 +37,57 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(172, 98);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogin.Location = new System.Drawing.Point(197, 131);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(82, 22);
+            this.btnLogin.Size = new System.Drawing.Size(94, 29);
             this.btnLogin.TabIndex = 9;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(93, 59);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Location = new System.Drawing.Point(106, 79);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(270, 23);
+            this.txtPassword.Size = new System.Drawing.Size(308, 27);
             this.txtPassword.TabIndex = 8;
             // 
             // txtGmail
             // 
-            this.txtGmail.Location = new System.Drawing.Point(93, 22);
-            this.txtGmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtGmail.Location = new System.Drawing.Point(106, 29);
             this.txtGmail.Name = "txtGmail";
-            this.txtGmail.Size = new System.Drawing.Size(270, 23);
+            this.txtGmail.Size = new System.Drawing.Size(308, 27);
             this.txtGmail.TabIndex = 7;
             // 
             // password
             // 
             this.password.AutoSize = true;
-            this.password.Location = new System.Drawing.Point(24, 61);
+            this.password.Location = new System.Drawing.Point(27, 81);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(57, 15);
+            this.password.Size = new System.Drawing.Size(70, 20);
             this.password.TabIndex = 6;
             this.password.Text = "Password";
             // 
             // gmail
             // 
             this.gmail.AutoSize = true;
-            this.gmail.Location = new System.Drawing.Point(24, 24);
+            this.gmail.Location = new System.Drawing.Point(27, 32);
             this.gmail.Name = "gmail";
-            this.gmail.Size = new System.Drawing.Size(38, 15);
+            this.gmail.Size = new System.Drawing.Size(48, 20);
             this.gmail.TabIndex = 5;
             this.gmail.Text = "Gmail";
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 142);
+            this.ClientSize = new System.Drawing.Size(495, 189);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtGmail);
             this.Controls.Add(this.password);
             this.Controls.Add(this.gmail);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmLogin";
             this.Text = "FrmLogin";
             this.ResumeLayout(false);

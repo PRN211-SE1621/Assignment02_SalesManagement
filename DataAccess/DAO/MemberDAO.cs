@@ -1,4 +1,5 @@
 ﻿using BusinessObject;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,7 @@ namespace DataAccess
                 }
             }
         }
-        public List<Member> GetList() => salesManagementContext.Members.ToList();
+        public List<Member> GetList() => salesManagementContext.Members.AsNoTracking().ToList();
         public Member? GetById(int id) => salesManagementContext.Members.SingleOrDefault<Member>(m => m.MemberId == id);
 
         public Member? GetMemberByEmail(string email) => salesManagementContext.Members.SingleOrDefault<Member>(m => m.Email.Equals(email));
@@ -79,6 +80,7 @@ namespace DataAccess
                 {
                     throw new Exception("Member does not already existed.");
                 }
+
                 salesManagementContext.Members.Update(member);
                 salesManagementContext.SaveChanges();
             } catch (Exception e)

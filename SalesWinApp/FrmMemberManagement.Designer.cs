@@ -55,42 +55,40 @@
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(197, 102);
-            this.txtCountry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCountry.Location = new System.Drawing.Point(225, 136);
             this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(319, 23);
+            this.txtCountry.Size = new System.Drawing.Size(364, 27);
             this.txtCountry.TabIndex = 58;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(96, 104);
+            this.label1.Location = new System.Drawing.Point(110, 139);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 15);
+            this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 57;
             this.label1.Text = "Country";
             // 
             // dgvMemberList
             // 
+            this.dgvMemberList.AllowUserToAddRows = false;
             this.dgvMemberList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMemberList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMemberList.Location = new System.Drawing.Point(43, 208);
-            this.dgvMemberList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvMemberList.Location = new System.Drawing.Point(49, 277);
             this.dgvMemberList.Name = "dgvMemberList";
             this.dgvMemberList.ReadOnly = true;
             this.dgvMemberList.RowHeadersWidth = 51;
             this.dgvMemberList.RowTemplate.Height = 29;
             this.dgvMemberList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMemberList.Size = new System.Drawing.Size(1077, 258);
+            this.dgvMemberList.Size = new System.Drawing.Size(1231, 344);
             this.dgvMemberList.TabIndex = 55;
             this.dgvMemberList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMemberList_CellDoubleClick);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(704, 145);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Location = new System.Drawing.Point(805, 193);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(102, 32);
+            this.btnDelete.Size = new System.Drawing.Size(117, 43);
             this.btnDelete.TabIndex = 54;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -98,10 +96,9 @@
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(506, 145);
-            this.btnNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNew.Location = new System.Drawing.Point(578, 193);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(102, 32);
+            this.btnNew.Size = new System.Drawing.Size(117, 43);
             this.btnNew.TabIndex = 53;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = true;
@@ -109,10 +106,9 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(311, 145);
-            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLoad.Location = new System.Drawing.Point(355, 193);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(102, 32);
+            this.btnLoad.Size = new System.Drawing.Size(117, 43);
             this.btnLoad.TabIndex = 52;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
@@ -120,98 +116,95 @@
             // 
             // txtCompanyName
             // 
-            this.txtCompanyName.Location = new System.Drawing.Point(197, 67);
-            this.txtCompanyName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCompanyName.Location = new System.Drawing.Point(225, 89);
             this.txtCompanyName.Name = "txtCompanyName";
-            this.txtCompanyName.Size = new System.Drawing.Size(320, 23);
+            this.txtCompanyName.Size = new System.Drawing.Size(365, 27);
             this.txtCompanyName.TabIndex = 51;
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(718, 102);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCity.Location = new System.Drawing.Point(821, 136);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(320, 23);
+            this.txtCity.Size = new System.Drawing.Size(365, 27);
             this.txtCity.TabIndex = 50;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(718, 30);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.Location = new System.Drawing.Point(821, 40);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(320, 23);
+            this.txtEmail.Size = new System.Drawing.Size(365, 27);
             this.txtEmail.TabIndex = 49;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(718, 67);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Location = new System.Drawing.Point(821, 89);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.ReadOnly = true;
-            this.txtPassword.Size = new System.Drawing.Size(320, 23);
+            this.txtPassword.Size = new System.Drawing.Size(365, 27);
             this.txtPassword.TabIndex = 48;
             // 
             // txtMemberId
             // 
-            this.txtMemberId.Location = new System.Drawing.Point(197, 30);
-            this.txtMemberId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMemberId.Location = new System.Drawing.Point(225, 40);
             this.txtMemberId.Name = "txtMemberId";
-            this.txtMemberId.Size = new System.Drawing.Size(320, 23);
+            this.txtMemberId.Size = new System.Drawing.Size(365, 27);
             this.txtMemberId.TabIndex = 47;
             // 
             // lbReleaseYear
             // 
             this.lbReleaseYear.AutoSize = true;
-            this.lbReleaseYear.Location = new System.Drawing.Point(643, 67);
+            this.lbReleaseYear.Location = new System.Drawing.Point(735, 89);
             this.lbReleaseYear.Name = "lbReleaseYear";
-            this.lbReleaseYear.Size = new System.Drawing.Size(57, 15);
+            this.lbReleaseYear.Size = new System.Drawing.Size(70, 20);
             this.lbReleaseYear.TabIndex = 46;
             this.lbReleaseYear.Text = "Password";
             // 
             // lbPrice
             // 
             this.lbPrice.AutoSize = true;
-            this.lbPrice.Location = new System.Drawing.Point(643, 32);
+            this.lbPrice.Location = new System.Drawing.Point(735, 43);
             this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(36, 15);
+            this.lbPrice.Size = new System.Drawing.Size(46, 20);
             this.lbPrice.TabIndex = 45;
             this.lbPrice.Text = "Email";
             // 
             // lbManufacturer
             // 
             this.lbManufacturer.AutoSize = true;
-            this.lbManufacturer.Location = new System.Drawing.Point(643, 104);
+            this.lbManufacturer.Location = new System.Drawing.Point(735, 139);
             this.lbManufacturer.Name = "lbManufacturer";
-            this.lbManufacturer.Size = new System.Drawing.Size(28, 15);
+            this.lbManufacturer.Size = new System.Drawing.Size(34, 20);
             this.lbManufacturer.TabIndex = 44;
             this.lbManufacturer.Text = "City";
             // 
             // lbCompanyName
             // 
             this.lbCompanyName.AutoSize = true;
-            this.lbCompanyName.Location = new System.Drawing.Point(96, 67);
+            this.lbCompanyName.Location = new System.Drawing.Point(110, 89);
             this.lbCompanyName.Name = "lbCompanyName";
-            this.lbCompanyName.Size = new System.Drawing.Size(94, 15);
+            this.lbCompanyName.Size = new System.Drawing.Size(116, 20);
             this.lbCompanyName.TabIndex = 43;
             this.lbCompanyName.Text = "Company Name";
             // 
             // lbCarID
             // 
             this.lbCarID.AutoSize = true;
-            this.lbCarID.Location = new System.Drawing.Point(96, 32);
+            this.lbCarID.Location = new System.Drawing.Point(110, 43);
             this.lbCarID.Name = "lbCarID";
-            this.lbCarID.Size = new System.Drawing.Size(66, 15);
+            this.lbCarID.Size = new System.Drawing.Size(84, 20);
             this.lbCarID.TabIndex = 42;
             this.lbCarID.Text = "Member ID";
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ádfiaosdfToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1154, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1319, 30);
             this.menuStrip1.TabIndex = 59;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -221,32 +214,32 @@
             this.toolTripMenuItemProductManagement,
             this.toolTripMenuItemOrderManagement});
             this.ádfiaosdfToolStripMenuItem.Name = "ádfiaosdfToolStripMenuItem";
-            this.ádfiaosdfToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.ádfiaosdfToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
             this.ádfiaosdfToolStripMenuItem.Text = "Management";
             // 
             // toolTripMenuItemProductManagement
             // 
             this.toolTripMenuItemProductManagement.Name = "toolTripMenuItemProductManagement";
-            this.toolTripMenuItemProductManagement.Size = new System.Drawing.Size(190, 22);
+            this.toolTripMenuItemProductManagement.Size = new System.Drawing.Size(235, 26);
             this.toolTripMenuItemProductManagement.Text = "Product Management";
             // 
             // toolTripMenuItemOrderManagement
             // 
             this.toolTripMenuItemOrderManagement.Name = "toolTripMenuItemOrderManagement";
-            this.toolTripMenuItemOrderManagement.Size = new System.Drawing.Size(190, 22);
+            this.toolTripMenuItemOrderManagement.Size = new System.Drawing.Size(235, 26);
             this.toolTripMenuItemOrderManagement.Text = "Order Management";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // FrmMemberManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1154, 503);
+            this.ClientSize = new System.Drawing.Size(1319, 671);
             this.Controls.Add(this.txtCountry);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvMemberList);
@@ -265,6 +258,7 @@
             this.Controls.Add(this.lbCarID);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmMemberManagement";
             this.Text = "FrmMemberManagement";
             this.Load += new System.EventHandler(this.FrmMemberManagement_Load);

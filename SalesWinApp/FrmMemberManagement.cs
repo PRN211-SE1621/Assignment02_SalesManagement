@@ -71,7 +71,7 @@ namespace SalesWinApp
                 InsertOrUpdate = true,
                 MemberRepository = memberRepo,
                 MemberInfo = memberRepo.GetMemberById(Int32.Parse(txtMemberId.Text))
-        };
+            };
             if (memberDetails.ShowDialog() == DialogResult.OK)
             {
                 LoadMembersToGridView(memberRepo.GetAllMembers());
@@ -80,7 +80,7 @@ namespace SalesWinApp
             LoadMembersToGridView(memberRepo.GetAllMembers());
         }
 
-        private void LoadMembersToGridView(IEnumerable<Member> members)
+        public void LoadMembersToGridView(IEnumerable<Member> members)
         {
             try
             {
@@ -104,6 +104,7 @@ namespace SalesWinApp
                 dgvMemberList.DataSource = null;
                 dgvMemberList.DataSource = bindingSource;
                 dgvMemberList.Columns["Password"].Visible = false;
+                dgvMemberList.Columns["Orders"].Visible = false;
                 if (members == null || members.Count() == 0)
                 {
                     ClearText();
