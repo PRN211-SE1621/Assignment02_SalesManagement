@@ -67,6 +67,8 @@
             // 
             // txtCategoryID
             // 
+            this.txtCategoryID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCategoryID.Location = new System.Drawing.Point(161, 131);
             this.txtCategoryID.Name = "txtCategoryID";
             this.txtCategoryID.Size = new System.Drawing.Size(367, 27);
@@ -83,6 +85,8 @@
             // 
             // txtProductName
             // 
+            this.txtProductName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtProductName.Location = new System.Drawing.Point(163, 83);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(365, 27);
@@ -90,6 +94,8 @@
             // 
             // txtUnitsInStock
             // 
+            this.txtUnitsInStock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUnitsInStock.Location = new System.Drawing.Point(161, 275);
             this.txtUnitsInStock.Name = "txtUnitsInStock";
             this.txtUnitsInStock.Size = new System.Drawing.Size(367, 27);
@@ -97,6 +103,8 @@
             // 
             // txtWeight
             // 
+            this.txtWeight.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtWeight.Location = new System.Drawing.Point(161, 179);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(367, 27);
@@ -104,6 +112,8 @@
             // 
             // txtUnitPrice
             // 
+            this.txtUnitPrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUnitPrice.Location = new System.Drawing.Point(161, 227);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Size = new System.Drawing.Size(367, 27);
@@ -111,6 +121,8 @@
             // 
             // txtProductID
             // 
+            this.txtProductID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtProductID.Location = new System.Drawing.Point(163, 35);
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.Size = new System.Drawing.Size(365, 27);
@@ -165,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 399);
+            this.ClientSize = new System.Drawing.Size(583, 416);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtCategoryID);
@@ -181,6 +193,7 @@
             this.Controls.Add(this.lbCarName);
             this.Controls.Add(this.lbCarID);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MinimumSize = new System.Drawing.Size(601, 463);
             this.Name = "FrmProductDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Detail";

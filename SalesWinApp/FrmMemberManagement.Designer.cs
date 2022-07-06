@@ -49,6 +49,7 @@
             this.toolTripMenuItemProductManagement = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTripMenuItemOrderManagement = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -85,7 +86,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(805, 193);
+            this.btnDelete.Location = new System.Drawing.Point(806, 202);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(117, 43);
             this.btnDelete.TabIndex = 54;
@@ -95,7 +96,7 @@
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(578, 193);
+            this.btnNew.Location = new System.Drawing.Point(579, 202);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(117, 43);
             this.btnNew.TabIndex = 53;
@@ -105,7 +106,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(355, 193);
+            this.btnLoad.Location = new System.Drawing.Point(356, 202);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(117, 43);
             this.btnLoad.TabIndex = 52;
@@ -203,7 +204,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1319, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1323, 30);
             this.menuStrip1.TabIndex = 59;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -237,11 +238,22 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(1163, 663);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(117, 43);
+            this.btnCancel.TabIndex = 60;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // FrmMemberManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1319, 671);
+            this.ClientSize = new System.Drawing.Size(1323, 768);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtCountry);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvMemberList);
@@ -295,5 +307,6 @@
         private ToolStripMenuItem toolTripMenuItemProductManagement;
         private ToolStripMenuItem exitToolStripMenuItem;
         private ToolStripMenuItem toolTripMenuItemOrderManagement;
+        private Button btnCancel;
     }
 }

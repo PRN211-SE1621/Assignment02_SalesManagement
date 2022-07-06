@@ -37,7 +37,10 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(197, 131);
+            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogin.Location = new System.Drawing.Point(320, 124);
+            this.btnLogin.MaximumSize = new System.Drawing.Size(94, 29);
+            this.btnLogin.MinimumSize = new System.Drawing.Size(94, 29);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(94, 29);
             this.btnLogin.TabIndex = 9;
@@ -79,15 +82,19 @@
             // 
             // FrmLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 189);
+            this.ClientSize = new System.Drawing.Size(458, 177);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtGmail);
             this.Controls.Add(this.password);
             this.Controls.Add(this.gmail);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(476, 224);
+            this.MinimumSize = new System.Drawing.Size(476, 224);
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
