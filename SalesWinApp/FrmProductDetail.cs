@@ -46,7 +46,7 @@ namespace SalesWinApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, InsertOrUpdate == false ? "Add new:" : "Insert");
+                MessageBox.Show(ex.Message, InsertOrUpdate == false ? "Add new:" : "Update");
             }
         }
 
