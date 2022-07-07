@@ -59,6 +59,7 @@
             this.toolTripMenuItemMemberManagement = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTripMenuItemOrderManagement = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.groupBoxSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -179,13 +180,13 @@
             // 
             this.dgvMemberList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMemberList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMemberList.Location = new System.Drawing.Point(34, 434);
+            this.dgvMemberList.Location = new System.Drawing.Point(34, 453);
             this.dgvMemberList.Name = "dgvMemberList";
             this.dgvMemberList.ReadOnly = true;
             this.dgvMemberList.RowHeadersWidth = 51;
             this.dgvMemberList.RowTemplate.Height = 29;
             this.dgvMemberList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMemberList.Size = new System.Drawing.Size(1076, 283);
+            this.dgvMemberList.Size = new System.Drawing.Size(1076, 273);
             this.dgvMemberList.TabIndex = 56;
             this.dgvMemberList.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMemberList_CellContentDoubleClick);
             // 
@@ -309,7 +310,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1139, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1149, 30);
             this.menuStrip1.TabIndex = 61;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -343,11 +344,22 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(993, 744);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(117, 43);
+            this.btnCancel.TabIndex = 62;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // FrmProductsManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1139, 759);
+            this.ClientSize = new System.Drawing.Size(1149, 807);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBoxSearch);
             this.Controls.Add(this.txtProductName);
@@ -367,6 +379,7 @@
             this.Controls.Add(this.lbCarName);
             this.Controls.Add(this.lbCarID);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MinimumSize = new System.Drawing.Size(1167, 854);
             this.Name = "FrmProductsManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Management";
@@ -413,5 +426,6 @@
         private ToolStripMenuItem toolTripMenuItemMemberManagement;
         private ToolStripMenuItem toolTripMenuItemOrderManagement;
         private ToolStripMenuItem exitToolStripMenuItem;
+        private Button btnCancel;
     }
 }
