@@ -16,5 +16,6 @@ namespace DataAccess.Repository
         public void Update(Order order) => OrderDAO.Instance.Update(order);
         public Order? GetById(int id) => OrderDAO.Instance.GetById(id);
         public IEnumerable<Order> FilterByDate(DateTime start, DateTime end) => OrderDAO.Instance.FilterByDate(start, end);
+        public IEnumerable<Order> SortDescByDate() => OrderDAO.Instance.SortDescByDate();
     }
 }

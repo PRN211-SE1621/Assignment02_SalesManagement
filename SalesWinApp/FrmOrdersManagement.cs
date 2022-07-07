@@ -37,7 +37,8 @@ namespace SalesWinApp
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-
+            orders = orderRepository.SortDescByDate();
+            LoadOrderGridView(orders);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
