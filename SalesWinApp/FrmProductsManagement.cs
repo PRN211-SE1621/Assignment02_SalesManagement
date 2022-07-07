@@ -74,8 +74,8 @@ namespace SalesWinApp
                 txtUnitsInStock.DataBindings.Add("Text", bindingSource, "UnitsInStock");
                 txtWeight.DataBindings.Add("Text", bindingSource, "Weight");
 
-                dgvMemberList.DataSource = null;
-                dgvMemberList.DataSource = bindingSource;
+                dgvProducts.DataSource = null;
+                dgvProducts.DataSource = bindingSource;
                 if (products.Count() == 0)
                 {
                     ClearText();
@@ -139,7 +139,14 @@ namespace SalesWinApp
             LoadProductsToGridView(proRepo.GetAllProducts());
         }
 
-        private void dgvMemberList_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dgvProducts_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             FrmProductDetail frmProductDetail = new FrmProductDetail
             {
@@ -153,44 +160,6 @@ namespace SalesWinApp
                 LoadProductsToGridView(proRepo.GetAllProducts());
                 bindingSource.Position = bindingSource.Count - 1;
             }
-        }
-
-        private void dgvMemberList_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            FrmProductDetail frmProductDetail = new FrmProductDetail
-            {
-                Text = "Update Product",
-                InsertOrUpdate = true,
-                proRepository = proRepo,
-                ProductInfo = GetProductObject()
-            };
-            frmProductDetail.Show();
-        }
-
-        private void toolTripMenuItemMemberManagement_Click(object sender, EventArgs e)
-        {
-            FrmMemberManagement frmMemberManagement = new FrmMemberManagement();
-            frmMemberManagement.Show();
-            this.Close();
-            this.Dispose();
-        }
-
-        private void toolTripMenuItemOrderManagement_Click(object sender, EventArgs e)
-        {
-            FrmOrdersManagement frmOrdersManagement = new FrmOrdersManagement();
-            frmOrdersManagement.Show();
-            this.Close();
-            this.Dispose();
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

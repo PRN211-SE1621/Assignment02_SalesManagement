@@ -40,7 +40,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvMemberList = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnLoad = new System.Windows.Forms.Button();
@@ -54,15 +53,10 @@
             this.lbManufacturer = new System.Windows.Forms.Label();
             this.lbCarName = new System.Windows.Forms.Label();
             this.lbCarID = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ádfiaosdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolTripMenuItemMemberManagement = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolTripMenuItemOrderManagement = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.groupBoxSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -176,20 +170,6 @@
             this.label1.TabIndex = 58;
             this.label1.Text = "ProductName";
             // 
-            // dgvMemberList
-            // 
-            this.dgvMemberList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMemberList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMemberList.Location = new System.Drawing.Point(34, 453);
-            this.dgvMemberList.Name = "dgvMemberList";
-            this.dgvMemberList.ReadOnly = true;
-            this.dgvMemberList.RowHeadersWidth = 51;
-            this.dgvMemberList.RowTemplate.Height = 29;
-            this.dgvMemberList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMemberList.Size = new System.Drawing.Size(1076, 273);
-            this.dgvMemberList.TabIndex = 56;
-            this.dgvMemberList.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMemberList_CellContentDoubleClick);
-            // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(768, 208);
@@ -301,49 +281,6 @@
             this.lbCarID.TabIndex = 43;
             this.lbCarID.Text = "Product ID";
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ádfiaosdfToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1149, 30);
-            this.menuStrip1.TabIndex = 61;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // ádfiaosdfToolStripMenuItem
-            // 
-            this.ádfiaosdfToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolTripMenuItemMemberManagement,
-            this.toolTripMenuItemOrderManagement});
-            this.ádfiaosdfToolStripMenuItem.Name = "ádfiaosdfToolStripMenuItem";
-            this.ádfiaosdfToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
-            this.ádfiaosdfToolStripMenuItem.Text = "Management";
-            // 
-            // toolTripMenuItemMemberManagement
-            // 
-            this.toolTripMenuItemMemberManagement.Name = "toolTripMenuItemMemberManagement";
-            this.toolTripMenuItemMemberManagement.Size = new System.Drawing.Size(240, 26);
-            this.toolTripMenuItemMemberManagement.Text = "Member Management";
-            this.toolTripMenuItemMemberManagement.Click += new System.EventHandler(this.toolTripMenuItemMemberManagement_Click);
-            // 
-            // toolTripMenuItemOrderManagement
-            // 
-            this.toolTripMenuItemOrderManagement.Name = "toolTripMenuItemOrderManagement";
-            this.toolTripMenuItemOrderManagement.Size = new System.Drawing.Size(240, 26);
-            this.toolTripMenuItemOrderManagement.Text = "Order Management";
-            this.toolTripMenuItemOrderManagement.Click += new System.EventHandler(this.toolTripMenuItemOrderManagement_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(993, 744);
@@ -354,17 +291,31 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // dgvProducts
+            // 
+            this.dgvProducts.AllowUserToAddRows = false;
+            this.dgvProducts.AllowUserToDeleteRows = false;
+            this.dgvProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProducts.Location = new System.Drawing.Point(39, 444);
+            this.dgvProducts.Name = "dgvProducts";
+            this.dgvProducts.RowHeadersWidth = 51;
+            this.dgvProducts.RowTemplate.Height = 29;
+            this.dgvProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProducts.Size = new System.Drawing.Size(1071, 285);
+            this.dgvProducts.TabIndex = 63;
+            this.dgvProducts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellDoubleClick);
+            // 
             // FrmProductsManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1149, 807);
+            this.Controls.Add(this.dgvProducts);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBoxSearch);
             this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvMemberList);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.btnLoad);
@@ -386,9 +337,7 @@
             this.Load += new System.EventHandler(this.FrmProductsManagement_Load);
             this.groupBoxSearch.ResumeLayout(false);
             this.groupBoxSearch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,7 +352,6 @@
         private GroupBox groupBoxSearch;
         private TextBox txtProductName;
         private Label label1;
-        private DataGridView dgvMemberList;
         private Button btnDelete;
         private Button btnNew;
         private Button btnLoad;
@@ -421,11 +369,7 @@
         private Label label6;
         private TextBox txtUnitsInStockSearch;
         private TextBox txtUnitPriceSearch;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem ádfiaosdfToolStripMenuItem;
-        private ToolStripMenuItem toolTripMenuItemMemberManagement;
-        private ToolStripMenuItem toolTripMenuItemOrderManagement;
-        private ToolStripMenuItem exitToolStripMenuItem;
         private Button btnCancel;
+        private DataGridView dgvProducts;
     }
 }

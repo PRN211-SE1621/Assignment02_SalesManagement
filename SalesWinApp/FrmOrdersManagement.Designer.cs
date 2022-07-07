@@ -47,11 +47,6 @@
             this.lbCarName = new System.Windows.Forms.Label();
             this.lbCarID = new System.Windows.Forms.Label();
             this.btnSort = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ádfiaosdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolTripMenuItemMemberManagement = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolTripMenuItemOrderManagement = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtShippedDate = new System.Windows.Forms.TextBox();
             this.txtOrderDate = new System.Windows.Forms.TextBox();
@@ -60,7 +55,6 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.groupBoxSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxSearch
@@ -240,49 +234,6 @@
             this.btnSort.UseVisualStyleBackColor = true;
             this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ádfiaosdfToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(995, 30);
-            this.menuStrip1.TabIndex = 84;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // ádfiaosdfToolStripMenuItem
-            // 
-            this.ádfiaosdfToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolTripMenuItemMemberManagement,
-            this.toolTripMenuItemOrderManagement});
-            this.ádfiaosdfToolStripMenuItem.Name = "ádfiaosdfToolStripMenuItem";
-            this.ádfiaosdfToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
-            this.ádfiaosdfToolStripMenuItem.Text = "Management";
-            // 
-            // toolTripMenuItemMemberManagement
-            // 
-            this.toolTripMenuItemMemberManagement.Name = "toolTripMenuItemMemberManagement";
-            this.toolTripMenuItemMemberManagement.Size = new System.Drawing.Size(240, 26);
-            this.toolTripMenuItemMemberManagement.Text = "Member Management";
-            this.toolTripMenuItemMemberManagement.Click += new System.EventHandler(this.toolTripMenuItemMemberManagement_Click);
-            // 
-            // toolTripMenuItemOrderManagement
-            // 
-            this.toolTripMenuItemOrderManagement.Name = "toolTripMenuItemOrderManagement";
-            this.toolTripMenuItemOrderManagement.Size = new System.Drawing.Size(240, 26);
-            this.toolTripMenuItemOrderManagement.Text = "Order Management";
-            this.toolTripMenuItemOrderManagement.Click += new System.EventHandler(this.toolTripMenuItemOrderManagement_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(785, 722);
@@ -347,7 +298,6 @@
             this.Controls.Add(this.txtEndDate);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtStartDate);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnSort);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -372,8 +322,6 @@
             this.Load += new System.EventHandler(this.FrmOrdersManagement_Load);
             this.groupBoxSearch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,11 +348,6 @@
         private DateTimePicker txtEndDate;
         private DateTimePicker txtStartDate;
         private Button btnSort;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem ádfiaosdfToolStripMenuItem;
-        private ToolStripMenuItem toolTripMenuItemMemberManagement;
-        private ToolStripMenuItem toolTripMenuItemOrderManagement;
-        private ToolStripMenuItem exitToolStripMenuItem;
         private Button btnCancel;
         private TextBox txtShippedDate;
         private TextBox txtOrderDate;
