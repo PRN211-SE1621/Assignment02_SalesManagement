@@ -77,6 +77,8 @@ namespace SalesWinApp
                 }
                 dgvOrderList.DataSource = null;
                 dgvOrderList.DataSource = bindingSource;
+                dgvOrderList.Columns["Member"].Visible = false;
+                dgvOrderList.Columns["OrderDetails"].Visible = false;
 
                 if (orders.Count() == 0)
                 {
