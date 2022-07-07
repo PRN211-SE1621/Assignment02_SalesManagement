@@ -45,6 +45,7 @@ namespace SalesWinApp
                 {
                     txtProductID.Text = "";
                 }
+                dgvProductList.Columns["OrderDetails"].Visible = false;
             }
             catch (Exception ex)
             {
