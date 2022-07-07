@@ -148,12 +148,11 @@ namespace SalesWinApp
                 proRepository = proRepo,
                 ProductInfo = GetProductObject()
             };
-            frmProductDetail.Show();
-            //if (frmProductDetail.ShowDialog() == DialogResult.OK)
-            //{
-             //   LoadProductsToGridView(proRepo.GetAllProducts());
-             //   bindingSource.Position = bindingSource.Count - 1;
-            //}
+            if (frmProductDetail.ShowDialog() == DialogResult.OK)
+            {
+                LoadProductsToGridView(proRepo.GetAllProducts());
+                bindingSource.Position = bindingSource.Count - 1;
+            }
         }
 
         private void dgvMemberList_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
