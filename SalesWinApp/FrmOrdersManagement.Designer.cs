@@ -66,7 +66,7 @@
             // groupBoxSearch
             // 
             this.groupBoxSearch.Controls.Add(this.btnFilter);
-            this.groupBoxSearch.Location = new System.Drawing.Point(113, 276);
+            this.groupBoxSearch.Location = new System.Drawing.Point(84, 276);
             this.groupBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBoxSearch.Name = "groupBoxSearch";
             this.groupBoxSearch.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -88,7 +88,7 @@
             // 
             // txtEndDate
             // 
-            this.txtEndDate.Location = new System.Drawing.Point(236, 363);
+            this.txtEndDate.Location = new System.Drawing.Point(207, 363);
             this.txtEndDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEndDate.Name = "txtEndDate";
             this.txtEndDate.Size = new System.Drawing.Size(262, 27);
@@ -96,7 +96,7 @@
             // 
             // txtStartDate
             // 
-            this.txtStartDate.Location = new System.Drawing.Point(236, 316);
+            this.txtStartDate.Location = new System.Drawing.Point(207, 316);
             this.txtStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStartDate.Name = "txtStartDate";
             this.txtStartDate.Size = new System.Drawing.Size(262, 27);
@@ -105,7 +105,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(137, 368);
+            this.label5.Location = new System.Drawing.Point(108, 368);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 20);
             this.label5.TabIndex = 41;
@@ -114,7 +114,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(137, 321);
+            this.label4.Location = new System.Drawing.Point(108, 321);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 20);
             this.label4.TabIndex = 16;
@@ -123,7 +123,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(555, 172);
+            this.label1.Location = new System.Drawing.Point(526, 172);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 76;
@@ -135,7 +135,7 @@
             this.dgvOrderList.AllowUserToDeleteRows = false;
             this.dgvOrderList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOrderList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrderList.Location = new System.Drawing.Point(113, 433);
+            this.dgvOrderList.Location = new System.Drawing.Point(84, 433);
             this.dgvOrderList.Name = "dgvOrderList";
             this.dgvOrderList.ReadOnly = true;
             this.dgvOrderList.RowHeadersWidth = 51;
@@ -146,7 +146,7 @@
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(271, 227);
+            this.btnNew.Location = new System.Drawing.Point(487, 226);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(117, 43);
             this.btnNew.TabIndex = 72;
@@ -156,7 +156,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(113, 226);
+            this.btnLoad.Location = new System.Drawing.Point(84, 226);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(117, 43);
             this.btnLoad.TabIndex = 71;
@@ -166,21 +166,21 @@
             // 
             // txtMemberID
             // 
-            this.txtMemberID.Location = new System.Drawing.Point(213, 123);
+            this.txtMemberID.Location = new System.Drawing.Point(184, 123);
             this.txtMemberID.Name = "txtMemberID";
             this.txtMemberID.Size = new System.Drawing.Size(262, 27);
             this.txtMemberID.TabIndex = 70;
             // 
             // txtFreight
             // 
-            this.txtFreight.Location = new System.Drawing.Point(213, 168);
+            this.txtFreight.Location = new System.Drawing.Point(184, 168);
             this.txtFreight.Name = "txtFreight";
             this.txtFreight.Size = new System.Drawing.Size(262, 27);
             this.txtFreight.TabIndex = 69;
             // 
             // txtOrderID
             // 
-            this.txtOrderID.Location = new System.Drawing.Point(213, 72);
+            this.txtOrderID.Location = new System.Drawing.Point(184, 72);
             this.txtOrderID.Name = "txtOrderID";
             this.txtOrderID.Size = new System.Drawing.Size(262, 27);
             this.txtOrderID.TabIndex = 66;
@@ -188,7 +188,7 @@
             // lbReleaseYear
             // 
             this.lbReleaseYear.AutoSize = true;
-            this.lbReleaseYear.Location = new System.Drawing.Point(555, 123);
+            this.lbReleaseYear.Location = new System.Drawing.Point(526, 123);
             this.lbReleaseYear.Name = "lbReleaseYear";
             this.lbReleaseYear.Size = new System.Drawing.Size(100, 20);
             this.lbReleaseYear.TabIndex = 65;
@@ -197,7 +197,7 @@
             // lbPrice
             // 
             this.lbPrice.AutoSize = true;
-            this.lbPrice.Location = new System.Drawing.Point(555, 76);
+            this.lbPrice.Location = new System.Drawing.Point(526, 76);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(105, 20);
             this.lbPrice.TabIndex = 64;
@@ -206,7 +206,7 @@
             // lbManufacturer
             // 
             this.lbManufacturer.AutoSize = true;
-            this.lbManufacturer.Location = new System.Drawing.Point(113, 168);
+            this.lbManufacturer.Location = new System.Drawing.Point(84, 168);
             this.lbManufacturer.Name = "lbManufacturer";
             this.lbManufacturer.Size = new System.Drawing.Size(55, 20);
             this.lbManufacturer.TabIndex = 63;
@@ -215,7 +215,7 @@
             // lbCarName
             // 
             this.lbCarName.AutoSize = true;
-            this.lbCarName.Location = new System.Drawing.Point(113, 123);
+            this.lbCarName.Location = new System.Drawing.Point(84, 123);
             this.lbCarName.Name = "lbCarName";
             this.lbCarName.Size = new System.Drawing.Size(84, 20);
             this.lbCarName.TabIndex = 62;
@@ -224,7 +224,7 @@
             // lbCarID
             // 
             this.lbCarID.AutoSize = true;
-            this.lbCarID.Location = new System.Drawing.Point(113, 76);
+            this.lbCarID.Location = new System.Drawing.Point(84, 76);
             this.lbCarID.Name = "lbCarID";
             this.lbCarID.Size = new System.Drawing.Size(66, 20);
             this.lbCarID.TabIndex = 61;
@@ -232,7 +232,7 @@
             // 
             // btnSort
             // 
-            this.btnSort.Location = new System.Drawing.Point(697, 311);
+            this.btnSort.Location = new System.Drawing.Point(668, 311);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(170, 77);
             this.btnSort.TabIndex = 83;
@@ -285,7 +285,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(814, 722);
+            this.btnCancel.Location = new System.Drawing.Point(785, 722);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(117, 43);
             this.btnCancel.TabIndex = 85;
@@ -295,28 +295,28 @@
             // 
             // txtShippedDate
             // 
-            this.txtShippedDate.Location = new System.Drawing.Point(682, 123);
+            this.txtShippedDate.Location = new System.Drawing.Point(653, 123);
             this.txtShippedDate.Name = "txtShippedDate";
             this.txtShippedDate.Size = new System.Drawing.Size(262, 27);
             this.txtShippedDate.TabIndex = 88;
             // 
             // txtOrderDate
             // 
-            this.txtOrderDate.Location = new System.Drawing.Point(682, 168);
+            this.txtOrderDate.Location = new System.Drawing.Point(653, 168);
             this.txtOrderDate.Name = "txtOrderDate";
             this.txtOrderDate.Size = new System.Drawing.Size(262, 27);
             this.txtOrderDate.TabIndex = 87;
             // 
             // txtRequiredDate
             // 
-            this.txtRequiredDate.Location = new System.Drawing.Point(682, 72);
+            this.txtRequiredDate.Location = new System.Drawing.Point(653, 72);
             this.txtRequiredDate.Name = "txtRequiredDate";
             this.txtRequiredDate.Size = new System.Drawing.Size(262, 27);
             this.txtRequiredDate.TabIndex = 86;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(436, 227);
+            this.btnUpdate.Location = new System.Drawing.Point(644, 226);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(117, 43);
             this.btnUpdate.TabIndex = 89;
@@ -326,7 +326,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(605, 226);
+            this.btnDelete.Location = new System.Drawing.Point(798, 226);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(117, 43);
             this.btnDelete.TabIndex = 90;
@@ -365,6 +365,7 @@
             this.Controls.Add(this.lbCarName);
             this.Controls.Add(this.lbCarID);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MinimumSize = new System.Drawing.Size(1013, 850);
             this.Name = "FrmOrdersManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order Management";

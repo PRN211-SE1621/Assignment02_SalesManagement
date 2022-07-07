@@ -49,7 +49,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(828, 166);
+            this.btnCancel.Location = new System.Drawing.Point(828, 437);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(107, 55);
@@ -60,7 +60,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(312, 166);
+            this.btnSave.Location = new System.Drawing.Point(465, 166);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(107, 55);
@@ -155,13 +155,13 @@
             this.dgvProductList.RowHeadersWidth = 51;
             this.dgvProductList.RowTemplate.Height = 29;
             this.dgvProductList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductList.Size = new System.Drawing.Size(878, 164);
+            this.dgvProductList.Size = new System.Drawing.Size(872, 164);
             this.dgvProductList.TabIndex = 93;
             this.dgvProductList.DataSourceChanged += new System.EventHandler(this.dgvProductList_DataSourceChanged);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(443, 166);
+            this.btnAdd.Location = new System.Drawing.Point(591, 166);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(217, 55);
@@ -172,7 +172,7 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(682, 166);
+            this.btnRemove.Location = new System.Drawing.Point(828, 166);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(107, 55);
@@ -184,7 +184,7 @@
             // lblProductID
             // 
             this.lblProductID.AutoSize = true;
-            this.lblProductID.Location = new System.Drawing.Point(64, 180);
+            this.lblProductID.Location = new System.Drawing.Point(63, 183);
             this.lblProductID.Name = "lblProductID";
             this.lblProductID.Size = new System.Drawing.Size(79, 20);
             this.lblProductID.TabIndex = 96;
@@ -192,7 +192,7 @@
             // 
             // txtProductID
             // 
-            this.txtProductID.Location = new System.Drawing.Point(168, 180);
+            this.txtProductID.Location = new System.Drawing.Point(167, 183);
             this.txtProductID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.Size = new System.Drawing.Size(124, 27);
@@ -202,7 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(975, 444);
+            this.ClientSize = new System.Drawing.Size(980, 527);
             this.Controls.Add(this.txtProductID);
             this.Controls.Add(this.lblProductID);
             this.Controls.Add(this.btnRemove);
@@ -219,6 +219,7 @@
             this.Controls.Add(this.lbManufacturer);
             this.Controls.Add(this.lbCarName);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MinimumSize = new System.Drawing.Size(998, 574);
             this.Name = "FrmOrdersDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order Detail";

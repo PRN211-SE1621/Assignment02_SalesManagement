@@ -40,19 +40,24 @@ namespace DataAccess
             if(GetById(product.ProductId) != null)
             {
                 throw new Exception("Product ID existed!");
-            } 
+            }
+            salesManagementContext = new SalesManagementContext();
             salesManagementContext.Products.Add(product);
             salesManagementContext.SaveChanges();
         }
 
         public void Delete(Product product)
         {
+            salesManagementContext = new SalesManagementContext();
             salesManagementContext.Products.Remove(product);
             salesManagementContext.SaveChanges();
         }
         public void Update(Product updatedProductInfo)
         {
-            salesManagementContext.Products.Update(updatedProductInfo);
+            salesManagementContext = new SalesManagementContext();
+            salesManagementContext.Entry<Product>(updatedProductInfo).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            salesManagementContext.SaveChanges(true);
+            //salesManagementContext.Products.Update(updatedProductInfo);
         }
         public IEnumerable<Product> SearchByName(string searchKey) 
             => salesManagementContext.Products.Where(p => p.ProductName.ToUpper().Contains(searchKey)).ToList();

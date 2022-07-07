@@ -110,5 +110,35 @@ namespace SalesWinApp
                 btnChangePassword.Enabled = false;
             }
         }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCountry_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCompanyName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMemberId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

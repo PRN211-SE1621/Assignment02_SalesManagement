@@ -27,6 +27,10 @@ namespace SalesWinApp
         {
             FrmMemberManagement frmMemberManagement = new FrmMemberManagement();
             frmMemberManagement.Show();
+            frmMemberManagement.FormClosing += delegate
+            {
+                this.Show();
+            };
             this.Hide();
         }
 
@@ -34,6 +38,10 @@ namespace SalesWinApp
         {
             FrmProductsManagement frmProductsManagement = new FrmProductsManagement();
             frmProductsManagement.Show();
+            frmProductsManagement.FormClosing += delegate
+            {
+                this.Show();
+            };
             this.Hide();
         }
 
@@ -41,6 +49,10 @@ namespace SalesWinApp
         {
             FrmOrdersManagement frmOrdersManagement = new FrmOrdersManagement();
             frmOrdersManagement.Show();
+            frmOrdersManagement.FormClosing += delegate
+            {
+                this.Show();
+            };
             this.Hide();
         }
     }
