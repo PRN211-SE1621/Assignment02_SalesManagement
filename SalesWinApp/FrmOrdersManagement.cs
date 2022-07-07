@@ -42,7 +42,12 @@ namespace SalesWinApp
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
+            DateTime startDate = txtStartDate.Value;
+            DateTime endDate = txtEndDate.Value;
+            orders = orderRepository.FilterByDate(startDate, endDate);
+            LoadOrderGridView(orders);
+            txtStartDate.Value = startDate;
+            txtEndDate.Value = endDate;
         }
 
 
@@ -60,17 +65,18 @@ namespace SalesWinApp
                 bindingSource.DataSource = orders;
 
                 ClearBinding();
-
-                txtOrderID.DataBindings.Add("Text", bindingSource, "OrderId");
-                txtMemberID.DataBindings.Add("Text", bindingSource, "MemberId");
-                txtFreight.DataBindings.Add("Text", bindingSource, "Freight");
-                txtRequiredDate.DataBindings.Add("Text", bindingSource, "RequiredDate");
-                txtShippedDate.DataBindings.Add("Text", bindingSource, "ShippedDate");
-                txtOrderDate.DataBindings.Add("Text", bindingSource, "OrderDate");
-
+                if (orders.Count() > 0)
+                {
+                    txtOrderID.DataBindings.Add("Text", bindingSource, "OrderId");
+                    txtMemberID.DataBindings.Add("Text", bindingSource, "MemberId");
+                    txtFreight.DataBindings.Add("Text", bindingSource, "Freight");
+                    txtRequiredDate.DataBindings.Add("Text", bindingSource, "RequiredDate");
+                    txtShippedDate.DataBindings.Add("Text", bindingSource, "ShippedDate");
+                    txtOrderDate.DataBindings.Add("Text", bindingSource, "OrderDate");                    
+                }
                 dgvOrderList.DataSource = null;
                 dgvOrderList.DataSource = bindingSource;
-                ;
+
                 if (orders.Count() == 0)
                 {
                     ClearText();

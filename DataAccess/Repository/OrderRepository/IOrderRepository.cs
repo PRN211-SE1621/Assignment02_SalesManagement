@@ -15,5 +15,6 @@ namespace DataAccess.Repository
         public void Delete(Order order);
         public void Update(Order order);
         public Order? GetById(int id);
+        public IEnumerable<Order> FilterByDate(DateTime start, DateTime end);
     }
 }

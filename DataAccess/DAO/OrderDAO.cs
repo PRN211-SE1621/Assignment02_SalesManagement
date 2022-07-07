@@ -58,7 +58,7 @@ namespace DataAccess
         }
 
         public IEnumerable<Order> FilterByDate(DateTime startDate, DateTime endate)
-            => salesManagementContext.Orders.Where(o => (o.OrderDate.CompareTo(startDate) >= 0 && o.OrderDate.CompareTo(endate) <= 0)).ToList().OrderByDescending(o => o.OrderDate);
+            => salesManagementContext.Orders.Where(o => (o.OrderDate.CompareTo(startDate.AddDays(-1)) > 0 && o.OrderDate.CompareTo(endate.AddDays(1)) < 0)).ToList().OrderByDescending(o => o.OrderDate);
 
 
     }
