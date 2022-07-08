@@ -63,7 +63,6 @@ namespace SalesWinApp
                 bindingSource.DataSource = Cart;
                 dgvProductList.DataSource = bindingSource;
                 txtProductID.DataBindings.Clear();
-                txtProductID.DataBindings.Add("Text", bindingSource, "ProductId");
                 if (Cart.Count == 0)
                 {
                     btnRemove.Enabled = false;
@@ -72,6 +71,7 @@ namespace SalesWinApp
                 else
                 {
                     btnRemove.Enabled = true;
+                    txtProductID.DataBindings.Add("Text", bindingSource, "ProductId");
                 }
             }
             catch (Exception ex)
@@ -95,20 +95,49 @@ namespace SalesWinApp
                     };
                     list.Add(od);
                 });
-                var order = new Order()
+                bool checkQuantity = true;
+                list.ForEach(l =>
                 {
-                    MemberId = Int32.Parse(txtMemberID.Text),
-                    OrderDate = DateTime.Now,
-                    ShippedDate = Convert.ToDateTime(txtShippedDate.Value),
-                    RequiredDate = Convert.ToDateTime(txtRequiredDate.Value),
-                    Freight = decimal.Parse(txtFreight.Text),
-                    OrderDetails = list
-                };
-                orderRepository.Add(order);
-
-                if (MessageBox.Show("Added successfully!") == DialogResult.OK)
+                    Product p = productRepository.GetProductById(l.ProductId);
+                    if (l.Quantity > p.UnitsInStock)
+                    {
+                        checkQuantity = false;
+                    }
+                });
+                if (checkQuantity)
                 {
-                    this.Close();
+                    var order = new Order()
+                    {
+                        MemberId = Int32.Parse(txtMemberID.Text),
+                        OrderDate = DateTime.Now,
+                        ShippedDate = Convert.ToDateTime(txtShippedDate.Value),
+                        RequiredDate = Convert.ToDateTime(txtRequiredDate.Value),
+                        Freight = decimal.Parse(txtFreight.Text),
+                        OrderDetails = list
+                    };
+                    orderRepository.Add(order);
+                    list.ForEach(l =>
+                    {
+                        Product p = productRepository.GetProductById(l.ProductId);
+                        p.UnitsInStock = p.UnitsInStock - l.Quantity;
+                        productRepository.UpdateProduct(p);
+                    });
+                    if (MessageBox.Show("Added successfully!") == DialogResult.OK)
+                    {
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    if (MessageBox.Show("Some of your cart are out of stock! Do you want to add again", "Add fail", MessageBoxButtons.YesNo) == DialogResult.No)
+                    {
+                        this.Close();
+                    }
+                    else
+                    {
+                        Cart = new List<CartDTO>();
+                        LoadOrderGridView();
+                    }
                 }
             }
             catch (Exception ex)
