@@ -1,14 +1,5 @@
 ﻿using BusinessObject;
 using DataAccess.Repository;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SalesWinApp
 {
@@ -16,11 +7,9 @@ namespace SalesWinApp
     {
 
         private BindingSource bindingSource;
-        private IEnumerable<Product>? products;
-        private IProductRepository productRepository;
-        private IOrderDetailRepository orderDetailRepository;
         private IOrderRepository orderRepository;
         public Order? Order;
+        public Member Member { get; set; }
 
         public FrmUpdateOrder()
         {
@@ -30,9 +19,7 @@ namespace SalesWinApp
         {
             ShowInfo();
             LoadOrderGridView();
-            productRepository = new ProductRepository();
-            orderRepository = new OrderRepository();
-            orderDetailRepository = new OrderDetailRepository();
+            if(Member != null) btnSave.Enabled = false;
         }
 
         private void ShowInfo()
@@ -70,6 +57,8 @@ namespace SalesWinApp
                 bindingSource = new BindingSource();
                 bindingSource.DataSource = Order?.OrderDetails;
                 dgvProductList.DataSource = bindingSource;
+                dgvProductList.Columns["Order"].Visible = false;
+                dgvProductList.Columns["Product"].Visible = false;
             }
             catch (Exception ex)
             {

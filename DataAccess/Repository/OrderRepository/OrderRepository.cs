@@ -17,5 +17,6 @@ namespace DataAccess.Repository
         public Order? GetById(int id) => OrderDAO.Instance.GetById(id);
         public IEnumerable<Order> FilterByDate(DateTime start, DateTime end) => OrderDAO.Instance.FilterByDate(start, end);
         public IEnumerable<Order> SortDescByDate() => OrderDAO.Instance.SortDescByDate();
+        public IEnumerable<Order> GetAllOfMember(int memberId) => OrderDAO.Instance.GetByMemberId(memberId);
     }
 }

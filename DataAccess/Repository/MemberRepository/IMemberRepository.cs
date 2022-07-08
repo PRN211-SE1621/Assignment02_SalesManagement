@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessObject;
 
-namespace DataAccess.Repossitory
+namespace DataAccess.Repository
 {
     public interface IMemberRepository
     {

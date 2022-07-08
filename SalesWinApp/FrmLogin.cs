@@ -1,5 +1,5 @@
 ﻿using BusinessObject;
-using DataAccess.Repossitory;
+using DataAccess.Repository;
 using Microsoft.Extensions.Configuration;
 
 namespace SalesWinApp
@@ -19,7 +19,7 @@ namespace SalesWinApp
 
             if (IsDefaultAdmin(email, password))
             {
-                FrmAdmin frmAdmin = new FrmAdmin(this);
+                FrmAdmin frmAdmin = new FrmAdmin();
                 frmAdmin.Show();
                 this.Hide();
                 frmAdmin.FormClosed += delegate
@@ -37,16 +37,13 @@ namespace SalesWinApp
                 }
                 else
                 {
-                    /*MemberDetails memberDetails = new MemberDetails(this)
-                    {
-                        MemberInfo = member,
-                        MemberRepository = memberRepo,
-                        InsertOrUpdate = true,
-                        IsAdmin = false
-                    };
+                    FrmUser frmUser = new FrmUser(member);
+                    frmUser.Show();
                     this.Hide();
-                    memberDetails.Show();
-                    */
+                    frmUser.FormClosed += delegate
+                    {
+                        this.Close();
+                    };
                 }
             }
         }

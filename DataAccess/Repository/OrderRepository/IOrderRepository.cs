@@ -10,6 +10,7 @@ namespace DataAccess.Repository
     public interface IOrderRepository
     {
         public IEnumerable<Order> GetAll();
+        public IEnumerable<Order> GetAllOfMember(int memberId);
         public IEnumerable<Order> GetAllIgnore();
         public void Add(Order order);
         public void Delete(Order order);

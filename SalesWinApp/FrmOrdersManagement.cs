@@ -1,15 +1,6 @@
 ﻿using BusinessObject;
 using DataAccess;
 using DataAccess.Repository;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace SalesWinApp
 {
@@ -19,7 +10,7 @@ namespace SalesWinApp
         private BindingSource bindingSource;
         private IEnumerable<Order>? orders;
         private IOrderRepository orderRepository;
-        private IOrderDetailRepository orderDetailRepository;
+        public Member Member { get; set; }
 
         public FrmOrdersManagement()
         {
@@ -29,11 +20,21 @@ namespace SalesWinApp
         private void FrmOrdersManagement_Load(object sender, EventArgs e)
         {
             orderRepository = new OrderRepository();
-            orderDetailRepository = new OrderDetailRepository();
-            orders = orderRepository.GetAll();
+            orders = AllOrderInForm();
             LoadOrderGridView(orders);
+
+            if(Member != null)
+            {
+                btnDelete.Enabled = false;
+                //btnUpdate.Enabled = false;
+                btnNew.Enabled = false;
+            }    
         }
 
+        private IEnumerable<Order> AllOrderInForm()
+        {
+            return Member == null ? orderRepository.GetAll() : orderRepository.GetAllOfMember(Member.MemberId);
+        }
 
         private void btnSort_Click(object sender, EventArgs e)
         {
@@ -138,12 +139,13 @@ namespace SalesWinApp
             {
                 FrmUpdateOrder frm = new FrmUpdateOrder()
                 {
-                    Order = orderRepository.GetById(Int32.Parse(txtOrderID.Text))
+                    Order = orderRepository.GetById(Int32.Parse(txtOrderID.Text)),
+                    Member = Member
                 };
                 frm.Show();
                 frm.FormClosed += delegate
                 {
-                    orders = OrderDAO.Instance.GetList();
+                    orders = AllOrderInForm();
                     LoadOrderGridView(orders);
                 };
             }

@@ -63,5 +63,7 @@ namespace DataAccess
         public IEnumerable<Order> SortDescByDate()
             => salesManagementContext.Orders.ToList().OrderByDescending(o => o.OrderDate);
 
+        public IEnumerable<Order> GetByMemberId(int memberId) => salesManagementContext.Orders.Where(o => o.MemberId == memberId).Include(o => o.OrderDetails);
+
     }
 }

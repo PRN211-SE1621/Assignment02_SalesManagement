@@ -18,6 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="FrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmUpdateOrder.cs">
       <SubType>Form</SubType>
     </Compile>

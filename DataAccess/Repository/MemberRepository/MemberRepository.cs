@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using BusinessObject;
 using DataAccess;
 
-namespace DataAccess.Repossitory
+namespace DataAccess.Repository
 {
     public class MemberRepository : IMemberRepository
     {
