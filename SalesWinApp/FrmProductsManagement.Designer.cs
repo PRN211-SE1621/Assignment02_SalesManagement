@@ -34,8 +34,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBoxSearch = new System.Windows.Forms.GroupBox();
-            this.txtUnitsInStockSearch = new System.Windows.Forms.TextBox();
-            this.txtUnitPriceSearch = new System.Windows.Forms.TextBox();
+            this.txtUnitsInStockMinSearch = new System.Windows.Forms.TextBox();
+            this.txtUnitPriceMinSearch = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtProductName = new System.Windows.Forms.TextBox();
@@ -55,13 +55,21 @@
             this.lbCarID = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtUnitPriceMaxSearch = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtUnitsInStockMaxSearch = new System.Windows.Forms.TextBox();
             this.groupBoxSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(695, 131);
+            this.btnSearch.Location = new System.Drawing.Point(893, 159);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(86, 31);
@@ -72,22 +80,22 @@
             // 
             // txtProductNameSearch
             // 
-            this.txtProductNameSearch.Location = new System.Drawing.Point(113, 83);
+            this.txtProductNameSearch.Location = new System.Drawing.Point(115, 100);
             this.txtProductNameSearch.Name = "txtProductNameSearch";
-            this.txtProductNameSearch.Size = new System.Drawing.Size(236, 27);
+            this.txtProductNameSearch.Size = new System.Drawing.Size(169, 27);
             this.txtProductNameSearch.TabIndex = 43;
             // 
             // txtProductIDSearch
             // 
-            this.txtProductIDSearch.Location = new System.Drawing.Point(112, 41);
+            this.txtProductIDSearch.Location = new System.Drawing.Point(114, 58);
             this.txtProductIDSearch.Name = "txtProductIDSearch";
-            this.txtProductIDSearch.Size = new System.Drawing.Size(237, 27);
+            this.txtProductIDSearch.Size = new System.Drawing.Size(170, 27);
             this.txtProductIDSearch.TabIndex = 42;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 89);
+            this.label5.Location = new System.Drawing.Point(3, 103);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 20);
             this.label5.TabIndex = 41;
@@ -96,7 +104,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 45);
+            this.label4.Location = new System.Drawing.Point(6, 61);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 20);
             this.label4.TabIndex = 16;
@@ -104,55 +112,53 @@
             // 
             // groupBoxSearch
             // 
-            this.groupBoxSearch.Controls.Add(this.txtUnitsInStockSearch);
-            this.groupBoxSearch.Controls.Add(this.txtUnitPriceSearch);
-            this.groupBoxSearch.Controls.Add(this.label7);
-            this.groupBoxSearch.Controls.Add(this.label6);
+            this.groupBoxSearch.Controls.Add(this.groupBox2);
+            this.groupBoxSearch.Controls.Add(this.groupBox1);
             this.groupBoxSearch.Controls.Add(this.btnSearch);
             this.groupBoxSearch.Controls.Add(this.txtProductNameSearch);
             this.groupBoxSearch.Controls.Add(this.txtProductIDSearch);
             this.groupBoxSearch.Controls.Add(this.label5);
             this.groupBoxSearch.Controls.Add(this.label4);
-            this.groupBoxSearch.Location = new System.Drawing.Point(169, 258);
+            this.groupBoxSearch.Location = new System.Drawing.Point(73, 258);
             this.groupBoxSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBoxSearch.Name = "groupBoxSearch";
             this.groupBoxSearch.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBoxSearch.Size = new System.Drawing.Size(827, 169);
+            this.groupBoxSearch.Size = new System.Drawing.Size(1004, 203);
             this.groupBoxSearch.TabIndex = 60;
             this.groupBoxSearch.TabStop = false;
             this.groupBoxSearch.Text = "Search";
             // 
-            // txtUnitsInStockSearch
+            // txtUnitsInStockMinSearch
             // 
-            this.txtUnitsInStockSearch.Location = new System.Drawing.Point(544, 83);
-            this.txtUnitsInStockSearch.Name = "txtUnitsInStockSearch";
-            this.txtUnitsInStockSearch.Size = new System.Drawing.Size(237, 27);
-            this.txtUnitsInStockSearch.TabIndex = 51;
+            this.txtUnitsInStockMinSearch.Location = new System.Drawing.Point(152, 34);
+            this.txtUnitsInStockMinSearch.Name = "txtUnitsInStockMinSearch";
+            this.txtUnitsInStockMinSearch.Size = new System.Drawing.Size(156, 27);
+            this.txtUnitsInStockMinSearch.TabIndex = 51;
             // 
-            // txtUnitPriceSearch
+            // txtUnitPriceMinSearch
             // 
-            this.txtUnitPriceSearch.Location = new System.Drawing.Point(543, 41);
-            this.txtUnitPriceSearch.Name = "txtUnitPriceSearch";
-            this.txtUnitPriceSearch.Size = new System.Drawing.Size(237, 27);
-            this.txtUnitPriceSearch.TabIndex = 50;
+            this.txtUnitPriceMinSearch.Location = new System.Drawing.Point(123, 34);
+            this.txtUnitPriceMinSearch.Name = "txtUnitPriceMinSearch";
+            this.txtUnitPriceMinSearch.Size = new System.Drawing.Size(169, 27);
+            this.txtUnitPriceMinSearch.TabIndex = 50;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(437, 89);
+            this.label7.Location = new System.Drawing.Point(16, 34);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 20);
+            this.label7.Size = new System.Drawing.Size(127, 20);
             this.label7.TabIndex = 49;
-            this.label7.Text = "Units In Stock";
+            this.label7.Text = "Units In Stock Min";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(437, 45);
+            this.label6.Location = new System.Drawing.Point(16, 34);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 20);
+            this.label6.Size = new System.Drawing.Size(101, 20);
             this.label6.TabIndex = 48;
-            this.label6.Text = "Unit Price";
+            this.label6.Text = "Unit Price Min";
             // 
             // txtProductName
             // 
@@ -297,14 +303,72 @@
             this.dgvProducts.AllowUserToDeleteRows = false;
             this.dgvProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducts.Location = new System.Drawing.Point(39, 444);
+            this.dgvProducts.Location = new System.Drawing.Point(39, 468);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.RowHeadersWidth = 51;
             this.dgvProducts.RowTemplate.Height = 29;
             this.dgvProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProducts.Size = new System.Drawing.Size(1071, 285);
+            this.dgvProducts.Size = new System.Drawing.Size(1071, 261);
             this.dgvProducts.TabIndex = 63;
             this.dgvProducts.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellDoubleClick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 20);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Unit Price Max";
+            // 
+            // txtUnitPriceMaxSearch
+            // 
+            this.txtUnitPriceMaxSearch.Location = new System.Drawing.Point(123, 76);
+            this.txtUnitPriceMaxSearch.Name = "txtUnitPriceMaxSearch";
+            this.txtUnitPriceMaxSearch.Size = new System.Drawing.Size(169, 27);
+            this.txtUnitPriceMaxSearch.TabIndex = 53;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.txtUnitPriceMaxSearch);
+            this.groupBox1.Controls.Add(this.txtUnitPriceMinSearch);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(313, 27);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(318, 125);
+            this.groupBox1.TabIndex = 54;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Unit Price";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtUnitsInStockMaxSearch);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.txtUnitsInStockMinSearch);
+            this.groupBox2.Location = new System.Drawing.Point(664, 27);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(334, 125);
+            this.groupBox2.TabIndex = 55;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Units In Stock";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 76);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(130, 20);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "Units In Stock Max";
+            // 
+            // txtUnitsInStockMaxSearch
+            // 
+            this.txtUnitsInStockMaxSearch.Location = new System.Drawing.Point(152, 73);
+            this.txtUnitsInStockMaxSearch.Name = "txtUnitsInStockMaxSearch";
+            this.txtUnitsInStockMaxSearch.Size = new System.Drawing.Size(156, 27);
+            this.txtUnitsInStockMaxSearch.TabIndex = 57;
             // 
             // FrmProductsManagement
             // 
@@ -338,6 +402,10 @@
             this.groupBoxSearch.ResumeLayout(false);
             this.groupBoxSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,9 +435,15 @@
         private Label lbCarID;
         private Label label7;
         private Label label6;
-        private TextBox txtUnitsInStockSearch;
-        private TextBox txtUnitPriceSearch;
+        private TextBox txtUnitsInStockMinSearch;
+        private TextBox txtUnitPriceMinSearch;
         private Button btnCancel;
         private DataGridView dgvProducts;
+        private TextBox txtUnitPriceMaxSearch;
+        private Label label2;
+        private GroupBox groupBox1;
+        private GroupBox groupBox2;
+        private TextBox txtUnitsInStockMaxSearch;
+        private Label label3;
     }
 }

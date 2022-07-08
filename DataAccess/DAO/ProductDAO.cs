@@ -83,5 +83,6 @@ namespace DataAccess
             }
             return salesManagementContext.Products.Where(p => (p.UnitsInStock.CompareTo(minVal) >= 0 && p.UnitsInStock.CompareTo(maxVal) <= 0));
         }
+
     }
 }

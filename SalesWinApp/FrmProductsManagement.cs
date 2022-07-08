@@ -95,6 +95,11 @@ namespace SalesWinApp
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
+            LoadProductsToGridView(proRepo.SearchProductByIdAndNameAndUnitPriceAndUnitInStock(
+                txtProductIDSearch.Text, txtProductNameSearch.Text, txtUnitPriceMinSearch.Text,
+                txtUnitPriceMaxSearch.Text, txtUnitsInStockMinSearch.Text, txtUnitsInStockMaxSearch.Text
+               )) ;
+            
         }
 
         private void btnNew_Click(object sender, EventArgs e)
