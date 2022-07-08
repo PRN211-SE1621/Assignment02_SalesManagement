@@ -44,14 +44,8 @@
             this.lbManufacturer = new System.Windows.Forms.Label();
             this.lbCompanyName = new System.Windows.Forms.Label();
             this.lbCarID = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ádfiaosdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolTripMenuItemProductManagement = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolTripMenuItemOrderManagement = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtCountry
@@ -195,49 +189,6 @@
             this.lbCarID.TabIndex = 42;
             this.lbCarID.Text = "Member ID";
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ádfiaosdfToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1323, 30);
-            this.menuStrip1.TabIndex = 59;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // ádfiaosdfToolStripMenuItem
-            // 
-            this.ádfiaosdfToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolTripMenuItemProductManagement,
-            this.toolTripMenuItemOrderManagement});
-            this.ádfiaosdfToolStripMenuItem.Name = "ádfiaosdfToolStripMenuItem";
-            this.ádfiaosdfToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
-            this.ádfiaosdfToolStripMenuItem.Text = "Management";
-            // 
-            // toolTripMenuItemProductManagement
-            // 
-            this.toolTripMenuItemProductManagement.Name = "toolTripMenuItemProductManagement";
-            this.toolTripMenuItemProductManagement.Size = new System.Drawing.Size(235, 26);
-            this.toolTripMenuItemProductManagement.Text = "Product Management";
-            this.toolTripMenuItemProductManagement.Click += new System.EventHandler(this.toolTripMenuItemProductManagement_Click);
-            // 
-            // toolTripMenuItemOrderManagement
-            // 
-            this.toolTripMenuItemOrderManagement.Name = "toolTripMenuItemOrderManagement";
-            this.toolTripMenuItemOrderManagement.Size = new System.Drawing.Size(235, 26);
-            this.toolTripMenuItemOrderManagement.Text = "Order Management";
-            this.toolTripMenuItemOrderManagement.Click += new System.EventHandler(this.toolTripMenuItemOrderManagement_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(1163, 663);
@@ -270,16 +221,12 @@
             this.Controls.Add(this.lbManufacturer);
             this.Controls.Add(this.lbCompanyName);
             this.Controls.Add(this.lbCarID);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmMemberManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Member Management";
             this.Load += new System.EventHandler(this.FrmMemberManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,11 +249,6 @@
         private Label lbManufacturer;
         private Label lbCompanyName;
         private Label lbCarID;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem ádfiaosdfToolStripMenuItem;
-        private ToolStripMenuItem toolTripMenuItemProductManagement;
-        private ToolStripMenuItem exitToolStripMenuItem;
-        private ToolStripMenuItem toolTripMenuItemOrderManagement;
         private Button btnCancel;
     }
 }

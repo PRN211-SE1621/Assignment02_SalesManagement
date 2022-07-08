@@ -177,24 +177,5 @@ namespace SalesWinApp
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void toolTripMenuItemMemberManagement_Click(object sender, EventArgs e)
-        {
-            new FrmMemberManagement().Show();
-            this.Close();
-            this.Dispose();
-        }
-
-        private void toolTripMenuItemOrderManagement_Click(object sender, EventArgs e)
-        {
-            new FrmOrdersManagement().Show();
-            this.Close();
-            this.Dispose();
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }

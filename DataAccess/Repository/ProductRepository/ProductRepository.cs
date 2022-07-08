@@ -58,6 +58,30 @@ namespace DataAccess.Repository
             }
             return result;
         }
+
+        public List<Product> SearchProductByUnitPrice(string unitPriceMin, string unitPriceMax)
+        {
+            List<Product> result = new List<Product>();
+            try
+            {
+                int intUnitPriceMin = int.Parse(unitPriceMin);
+                int intUnitPriceMax = int.Parse(unitPriceMax);
+                foreach (Product product in ProductDAO.Instance.GetList())
+                {
+                    if (product.UnitPrice >= intUnitPriceMin && product.UnitPrice <= intUnitPriceMax)
+                    {
+                        result.Add(product);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return result;
+        }
+
+
         public List<Product> SearchProductByIdAndName(string searchName, string searchId)
         {
             List<Product> resultList = new List<Product>();
@@ -87,6 +111,63 @@ namespace DataAccess.Repository
                             resultList.Add(p);
                         }
                     }
+                }
+            }
+            return resultList;
+        }
+
+        public IEnumerable<Product> SearchProductByIdAndNameAndUnitPriceAndUnitInStock(string searchId, string searchName, string searchUnitPriceMin, string searchUnitPriceMax, string searchUnitInStockMin, string searchUnitInStockMax)
+        {
+            List<Product> resultList = new List<Product>();
+            string id = (searchId != null) ? searchId : "";
+            string name = (searchName != null) ? searchName : "";
+            decimal unitPriceMin;
+            decimal unitPriceMax;
+            int unitInStockMin;
+            int unitInStockMax;
+            if ( searchUnitPriceMin == null || searchUnitPriceMin == "")
+            {
+                unitPriceMin = 0;
+            }
+            else
+            {
+                unitPriceMin = Convert.ToDecimal(searchUnitPriceMin);
+            }
+            if (searchUnitPriceMax == null || searchUnitPriceMax == "")
+            {
+                unitPriceMax = decimal.MaxValue;
+            }
+            else
+            {
+                unitPriceMax = Convert.ToDecimal(searchUnitPriceMax);
+            }
+            if (searchUnitInStockMin==null || searchUnitInStockMin=="")
+            {
+                unitInStockMin = 0;
+            }
+            else
+            {
+                unitInStockMin = int.Parse(searchUnitInStockMin);
+            }
+            if (searchUnitInStockMax == null || searchUnitInStockMax == "")
+            {
+                unitInStockMax = int.MaxValue;
+            }
+            else
+            {
+                unitInStockMax = int.Parse(searchUnitInStockMax);
+            }
+            foreach (Product product in GetAllProducts())
+            {
+                if (product.ProductId.ToString().Contains(id)
+                    && product.ProductName.Contains(name)
+                    && product.UnitPrice >= unitPriceMin
+                    && product.UnitPrice <= unitPriceMax
+                    && product.UnitsInStock >= unitInStockMin 
+                    && product.UnitsInStock <= unitInStockMax
+                    )
+                {
+                    resultList.Add(product);
                 }
             }
             return resultList;
