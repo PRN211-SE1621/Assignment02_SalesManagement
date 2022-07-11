@@ -7,7 +7,7 @@ namespace SalesWinApp
     {
 
         private BindingSource bindingSource;
-        private IOrderRepository orderRepository;
+        private IOrderRepository orderRepository = new OrderRepository();
         public Order? Order;
         public Member Member { get; set; }
 

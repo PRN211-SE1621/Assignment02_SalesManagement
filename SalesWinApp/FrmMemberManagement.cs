@@ -37,10 +37,14 @@ namespace SalesWinApp
         {
             try
             {
-                var member = GetMemberObject();
-                memberRepo.DeleteMember(member);
-                LoadMembersToGridView(memberRepo.GetAllMembers());
-            }
+                if(MessageBox.Show("Are you sure to delete?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    var member = GetMemberObject();
+                    memberRepo.DeleteMember(member);
+                    LoadMembersToGridView(memberRepo.GetAllMembers());
+                }
+            }    
+                
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Delete a member");
